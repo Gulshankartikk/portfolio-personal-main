@@ -16,4 +16,6 @@
 ---
 [![](https://visitcount.itsvg.in/api?id=gulshankartikk&icon=0&color=0)](https://visitcount.itsvg.in)
 
+![image alt](https://github.com/Gulshankartikk/portfolio-personal-main/blob/16b2d0c78e51b49c845519cd936817d4d6e12c44/Screenshot%202025-10-27%20215800.png)
+
 <!-- Proudly created with GPRM ( https://gprm.itsvg.in ) -->
