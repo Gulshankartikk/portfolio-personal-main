@@ -1,62 +1,6 @@
 # portfolio-personal-main
 
-Project Title
-A brief description of what this project does and who it's for
 
-🔗 Links
-portfoliolinkedintwitter
-
-Logo
-
-Roadmap
-Additional browser support
-
-Add more integrations
-
-Authors
-@Gulshankartikk
-Color Reference
-Color	Hex
-Example Color	#0a192f#0a192f
-Example Color	#f8f8f8#f8f8f8
-Example Color	#00b48a#00b48a
-Example Color	#00d1a0#00d1a0
-Features
-Light/dark mode toggle
-Live previews
-Fullscreen mode
-Cross platform
-License
-MIT
-
-Used By
-This project is used by the following companies:
-
-Company 1
-Company 2
-Acknowledgements
-Awesome Readme Templates
-Awesome README
-How to write a Good readme
-Badges
-Add badges from somewhere like: shields.io
-
-MIT LicenseGPLv3 LicenseAGPL License
-
-Contributing
-Contributions are always welcome!
-
-See contributing.md for ways to get started.
-
-Please adhere to this project's code of conduct.
-
-Related
-Here are some related projects
-
-Awesome README
-
-Tech Stack
-Client: html,css,javascript,scss
 
 
 ## 🌐 Socials:
