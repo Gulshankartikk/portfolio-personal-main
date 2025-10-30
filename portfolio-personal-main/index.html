@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Landing page responsive portfolio</title>
+  </head>
+  <body>
+    <!-- OVERLAY -->
+    <div class="overlay first"></div>
+    <div class="overlay second"></div>
+    <div class="overlay third"></div>
+
+    <!-- HEADER -->
+    <header class="l-header">
+      <nav class="nav bd-grid">
+        <div>
+          <a href="#" class="nav__logo">Gulshankartik</a>
+        </div>
+
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link" onclick="openDetail('projects')">Projects</a></li>
+            <li class="nav__item">
+              <a href="#" class="nav__link" onclick="openDetail('services')">Services</a>
+            </li>
+            <li class="nav__item"><a href="#" class="nav__link" onclick="openDetail('achievements')">Achievements</a></li>
+            <li class="nav__item"><a href="#" class="nav__link" onclick="openDetail('hobbies')">Hobbies</a></li>
+            <li class="nav__item"><a href="#" class="nav__link" onclick="openDetail('blog')">Blog</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </div>
+
+
+
+        <div id="projects" class="detail-section">
+          <h2>My Projects</h2>
+          <p>
+            Here are some of the projects I've worked on:<br><br>
+            • <strong>Portfolio Website:</strong> Responsive personal portfolio with dark/light theme<br>
+            • <strong>Web Applications:</strong> Full-stack projects using modern frameworks<br>
+            • <strong>DSA Solutions:</strong> Optimized algorithms and data structure implementations<br>
+            • <strong>Open Source Contributions:</strong> Contributing to community projects<br>
+            • <strong>Academic Projects:</strong> University coursework and research projects<br><br>
+            <em>Upload your completed projects to showcase your work!</em>
+          </p>
+          <button onclick="closeDetail('projects')">Close</button>
+        </div>
+
+        <div id="services" class="detail-section">
+          <h2>Services</h2>
+          <p>
+            • Full Stack Web Development<br>
+            • Frontend Development (HTML, CSS, JavaScript)<br>
+            • Backend Development (Python, Java)<br>
+            • Data Structures & Algorithms Solutions<br>
+            • Code Optimization & Performance Tuning
+          </p>
+          <button onclick="closeDetail('services')">Close</button>
+        </div>
+
+        <div id="blog" class="detail-section">
+          <h2>Blog</h2>
+          <p>
+            Welcome to my tech blog! Here I share insights about:<br><br>
+            • Programming tutorials and tips<br>
+            • DSA problem-solving approaches<br>
+            • Web development best practices<br>
+            • Latest technology trends<br>
+            • My coding journey and experiences
+          </p>
+          <button onclick="closeDetail('blog')">Close</button>
+        </div>
+
+        <div id="achievements" class="detail-section">
+          <h2>Achievements</h2>
+          <p>
+            • <strong>Academic Excellence:</strong> Consistent top performer in Computer Science coursework<br>
+            • <strong>Programming Contests:</strong> Participated in multiple coding competitions<br>
+            • <strong>Project Recognition:</strong> Developed innovative web applications<br>
+            • <strong>Technical Skills:</strong> Mastered multiple programming languages<br>
+            • <strong>Problem Solving:</strong> Solved 90+ DSA problems across platforms<br>
+            • <strong>Leadership:</strong> Led technical projects and mentored junior students
+          </p>
+          <button onclick="closeDetail('achievements')">Close</button>
+        </div>
+
+        <div id="hobbies" class="detail-section">
+          <h2>Hobbies & Interests</h2>
+          <p>
+            • <strong>Coding:</strong> Passionate about exploring new technologies and frameworks<br>
+            • <strong>Open Source:</strong> Contributing to community projects on GitHub<br>
+            • <strong>Tech Blogging:</strong> Writing about programming concepts and tutorials<br>
+            • <strong>Gaming:</strong> Strategy games and puzzle solving<br>
+            • <strong>Reading:</strong> Technology blogs, programming books, and sci-fi novels<br>
+            • <strong>Music:</strong> Listening to various genres while coding<br>
+            • <strong>Travel:</strong> Exploring new places and cultures
+          </p>
+          <button onclick="closeDetail('hobbies')">Close</button>
+        </div>
+
+
+
+        <div class="nav__actions">
+          <div class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
+            <ion-icon name="moon" id="theme-icon"></ion-icon>
+          </div>
+          <div class="nav__toggle" id="nav-toggle">
+            <ion-icon name="menu"></ion-icon>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="l-main bd-grid">
+      <section id="home" class="home">
+        <div class="home__information">
+          <span class="home__pressent anime-text">Hello, My name is</span>
+          <h1 class="home__title anime-text">Gulshan kartik</h1>
+          <span class="home__skill anime-text">Web Developer</span>
+
+          <div>
+            <a href="./assets/resume/original resume kartik.pdf" download class="home__button anime-text">DOWNLOAD RESUME</a>
+          </div>
+        </div>
+
+        <div class="home__img">
+          <img src="./assets/img/taj mahal.jpg" alt="" />
+        </div>
+
+        <div class="home__social">
+          <!-- Facebook -->
+          <a href="https://www.facebook.com/Gulshankartikk/" target="_blank">
+            <ion-icon name="logo-facebook" class="home__social-icon"></ion-icon>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://www.instagram.com/gulshan.kartik" target="_blank">
+            <ion-icon
+              name="logo-instagram"
+              class="home__social-icon"
+            ></ion-icon>
+          </a>
+
+          <!-- Twitter -->
+          <a href="https://twitter.com/Gulshankartikk" target="_blank">
+            <ion-icon name="logo-twitter" class="home__social-icon"></ion-icon>
+          </a>
+
+          <!-- GitHub -->
+          <a href="https://github.com/Gulshankartikk" target="_blank">
+            <ion-icon name="logo-github" class="home__social-icon"></ion-icon>
+          </a>
+
+          <!-- LinkedIn -->
+          <a
+            href="https://www.linkedin.com/in/gulshan-kumar-192852378/"
+            target="_blank"
+          >
+            <ion-icon name="logo-linkedin" class="home__social-icon"></ion-icon>
+          </a>
+        </div>
+      </section>
+
+      <!-- ABOUT SECTION -->
+      <section id="about" class="about-section">
+        <div class="section-content">
+          <div class="about-text">
+            <h2>About Me</h2>
+            <p>
+              I am a passionate and driven Full Stack Developer currently pursuing
+              a B.Tech in Computer Science (3rd year). I specialize in C++, Java
+              for Data Structures and Algorithms (DSA), and I am proficient in
+              Python and C for building efficient and scalable solutions in
+              front-end and back-end development. I am skilled in creating dynamic
+              web applications, optimizing code performance, and solving complex
+              programming challenges.
+            </p>
+            <p><strong>Skills:</strong> C++, Java, Python, JavaScript, HTML, CSS, DSA</p>
+            <p><strong>Education:</strong> B.Tech Computer Science (3rd Year)</p>
+          </div>
+          <div class="about-image">
+            <img src="./assets/img/third image.jpg" alt="About Me" />
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section id="contact" class="contact-section">
+        <div class="section-content">
+          <div class="contact-image">
+            <img src="./assets/img/second image.jpg" alt="Contact Me" />
+          </div>
+          <div class="contact-text">
+            <h2>Contact Me </h2>
+            <p>
+              <strong>Email:</strong> <a href="mailto:kg8726321083@gmail.com">kg8726321083@gmail.com</a><br>
+              <strong>Phone:</strong> <a href="tel:+918726321083">+918726321083</a><br><br>
+              <strong>Social Media:</strong><br>
+              • <a href="https://www.linkedin.com/in/gulshan-kumar-192852378/" target="_blank">LinkedIn</a><br>
+              • <a href="https://github.com/Gulshankartikk" target="_blank">GitHub</a><br>
+              • <a href="https://twitter.com/Gulshankartikk" target="_blank">Twitter</a><br>
+              • <a href="https://www.facebook.com/Gulshankartikk/" target="_blank">Facebook</a><br>
+              • <a href="https://www.instagram.com/gulshan.kartik" target="_blank">Instagram</a>
+            </p>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+
+    <!-- MAIN -->
+    <script src="assets/js/main.js"></script>
+
+    <!-- ICONS -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
+    ></script>
+  </body>
+</html>
