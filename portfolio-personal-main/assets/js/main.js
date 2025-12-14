@@ -31,8 +31,11 @@ function openDetail(id) {
   const el = document.getElementById(id);
   if (el) {
     el.classList.add('show');
+<<<<<<< HEAD
     // Show backdrop
     showBackdrop();
+=======
+>>>>>>> 71cb6dd25c261496b6265752e75d7c6705ab36b6
   }
 }
 
@@ -40,6 +43,7 @@ function closeDetail(id) {
   const el = document.getElementById(id);
   if (el) {
     el.classList.remove('show');
+<<<<<<< HEAD
     // Hide backdrop
     hideBackdrop();
   }
@@ -76,6 +80,8 @@ function hideBackdrop() {
   if (backdrop) {
     backdrop.classList.remove('show');
     setTimeout(() => backdrop.remove(), 300);
+=======
+>>>>>>> 71cb6dd25c261496b6265752e75d7c6705ab36b6
   }
 }
 
