@@ -1,228 +1,416 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/styles.css" />
-    <title>Landing page responsive portfolio</title>
-  </head>
-  <body>
-    <!-- OVERLAY -->
-    <div class="overlay first"></div>
-    <div class="overlay second"></div>
-    <div class="overlay third"></div>
 
-    <!-- HEADER -->
-    <header class="l-header">
-      <nav class="nav bd-grid">
-        <div>
-          <a href="#" class="nav__logo">Gulshankartik</a>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="assets/css/portfolio.css" />
+  <meta name="description"
+    content="Gulshan Kumar - Full Stack MERN Developer specializing in scalable web applications, role-based management systems, and modern UI/UX design." />
+  <meta name="keywords"
+    content="MERN Developer, Full Stack Developer, React, Node.js, MongoDB, Express.js, Web Developer Portfolio" />
+  <meta name="author" content="Gulshan Kumar" />
+  <title>Gulshan Kumar | Full Stack MERN Developer</title>
+</head>
+
+<body>
+  <!-- OVERLAY ANIMATION -->
+  <div class="overlay first"></div>
+  <div class="overlay second"></div>
+  <div class="overlay third"></div>
+
+  <!-- HEADER -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="#home" class="nav__logo">Gulshan Kumar</a>
+
+      <div class="nav__menu" id="nav-menu">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+          <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+          <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+          <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="nav__actions">
+        <div class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
+          <ion-icon name="moon" id="theme-icon"></ion-icon>
+        </div>
+        <div class="nav__toggle" id="nav-toggle">
+          <ion-icon name="menu"></ion-icon>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+    <!-- HERO SECTION -->
+    <section id="home" class="hero">
+      <div class="container hero__container">
+        <div class="hero__content">
+          <h1 class="hero__title anime-text">Hi, I'm Gulshan 👋</h1>
+          <h2 class="hero__subtitle anime-text">Full Stack MERN Developer</h2>
+          <p class="hero__description anime-text">
+            I build scalable web applications with clean UI & secure backend. Specialized in creating role-based
+            management systems and modern web solutions.
+          </p>
+
+          <div class="hero__buttons anime-text">
+            <a href="#projects" class="btn btn--primary">
+              <ion-icon name="briefcase"></ion-icon> View Projects
+            </a>
+            <a href="./assets/resume/resume kartik.pdf" download class="btn btn--secondary">
+              <ion-icon name="download"></ion-icon> Download Resume
+            </a>
+          </div>
         </div>
 
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#" class="nav__link" onclick="openDetail('projects')">Projects</a></li>
-            <li class="nav__item">
-              <a href="#" class="nav__link" onclick="openDetail('services')">Services</a>
-            </li>
-            <li class="nav__item"><a href="#" class="nav__link" onclick="openDetail('achievements')">Achievements</a></li>
-            <li class="nav__item"><a href="#" class="nav__link" onclick="openDetail('hobbies')">Hobbies</a></li>
-            <li class="nav__item"><a href="#" class="nav__link" onclick="openDetail('blog')">Blog</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+        <div class="hero__image anime-img">
+          <img src="./assets/img/taj mahal.jpg" alt="Gulshan Kumar" />
+        </div>
+
+        <div class="hero__social anime-social">
+          <a href="https://www.facebook.com/Gulshankartikk/" target="_blank" aria-label="Facebook">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a>
+          <a href="https://www.instagram.com/gulshan.kartik" target="_blank" aria-label="Instagram">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a>
+          <a href="https://twitter.com/Gulshankartikk" target="_blank" aria-label="Twitter">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a>
+          <a href="https://github.com/Gulshankartikk" target="_blank" aria-label="GitHub">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+          <a href="https://www.linkedin.com/in/gulshan-kumar-192852378/" target="_blank" aria-label="LinkedIn">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS SECTION -->
+    <section id="projects" class="projects">
+      <div class="container">
+        <h2 class="section__title">My Projects</h2>
+        <p class="section__subtitle">Showcasing my best work in Full Stack Development</p>
+
+        <!-- Featured Project -->
+        <div class="project__featured">
+          <div class="project__image">
+            <div class="project__badge">Featured</div>
+            <div class="project__tech-stack">
+              <span>MongoDB</span>
+              <span>Express.js</span>
+              <span>React.js</span>
+              <span>Node.js</span>
+            </div>
+          </div>
+          <div class="project__content">
+            <h3>🎓 DR AITD Management System</h3>
+            <p class="project__description">
+              A comprehensive College ERP system with role-based access control, built with modern web technologies.
+              Features include student/teacher/admin modules, attendance tracking, fee management, and resource sharing.
+            </p>
+
+            <ul class="project__features">
+              <li>
+                <ion-icon name="shield-checkmark"></ion-icon>
+                <span>JWT Authentication with 30-day token expiry</span>
+              </li>
+              <li>
+                <ion-icon name="people"></ion-icon>
+                <span>Complete Admin, Teacher & Student Modules</span>
+              </li>
+              <li>
+                <ion-icon name="desktop"></ion-icon>
+                <span>Professional responsive UI with custom components</span>
+              </li>
+              <li>
+                <ion-icon name="server"></ion-icon>
+                <span>RESTful API with secure backend architecture</span>
+              </li>
+            </ul>
+
+            <div class="project__links">
+              <a href="https://github.com/Gulshankartikk" target="_blank" class="btn btn--primary">
+                <ion-icon name="logo-github"></ion-icon> View Code
+              </a>
+              <a href="#contact" class="btn btn--secondary">
+                <ion-icon name="mail"></ion-icon> Get in Touch
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Other Projects Grid -->
+        <div class="projects__grid">
+          <div class="project__card">
+            <div class="project__card-icon">💼</div>
+            <h4>Portfolio Website</h4>
+            <p>Responsive personal portfolio with dark/light theme toggle and smooth animations</p>
+            <div class="project__card-tech">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>JavaScript</span>
+            </div>
+          </div>
+
+          <div class="project__card">
+            <div class="project__card-icon">🌐</div>
+            <h4>Web Applications</h4>
+            <p>Full-stack projects using modern frameworks and best practices</p>
+            <div class="project__card-tech">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+          </div>
+
+          <div class="project__card">
+            <div class="project__card-icon">🧮</div>
+            <h4>DSA Solutions</h4>
+            <p>Optimized algorithms and data structure implementations in C++, Java & Python</p>
+            <div class="project__card-tech">
+              <span>C++</span>
+              <span>Java</span>
+              <span>Python</span>
+            </div>
+          </div>
+
+          <div class="project__card">
+            <div class="project__card-icon">🤝</div>
+            <h4>Open Source</h4>
+            <p>Contributing to community projects and sharing knowledge on GitHub</p>
+            <div class="project__card-tech">
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="about">
+      <div class="container about__container">
+        <div class="about__content">
+          <h2 class="section__title">About Me</h2>
+
+          <div class="about__card">
+            <h3>👨‍💻 Who I Am</h3>
+            <p>
+              I am Gulshan Kumar, a passionate Full Stack MERN Developer with expertise in building scalable web
+              applications. I specialize in creating role-based management systems with clean UI and secure backend
+              architecture.
+            </p>
+          </div>
+
+          <div class="about__card">
+            <h3>🎓 Education</h3>
+            <p>
+              <strong>B.Tech in Computer Science</strong> (3rd Year)<br>
+              Focused on Data Structures, Algorithms, and Full Stack Development
+            </p>
+          </div>
+
+          <div class="about__card">
+            <h3>🚀 What I'm Building</h3>
+            <p>
+              Currently developing enterprise-level ERP systems and modern web applications using MERN stack. My
+              projects focus on solving real-world problems with efficient, scalable solutions.
+            </p>
+          </div>
+
+          <!-- Skills Section -->
+          <div class="skills">
+            <h3>💡 Technical Skills</h3>
+            <div class="skills__grid">
+              <div class="skill__category">
+                <h4>Frontend</h4>
+                <div class="skill__tags">
+                  <span>HTML5</span>
+                  <span>CSS3</span>
+                  <span>JavaScript</span>
+                  <span>React.js</span>
+                </div>
+              </div>
+
+              <div class="skill__category">
+                <h4>Backend</h4>
+                <div class="skill__tags">
+                  <span>Node.js</span>
+                  <span>Express.js</span>
+                  <span>RESTful APIs</span>
+                  <span>JWT Auth</span>
+                </div>
+              </div>
+
+              <div class="skill__category">
+                <h4>Database</h4>
+                <div class="skill__tags">
+                  <span>MongoDB</span>
+                  <span>MySQL</span>
+                </div>
+              </div>
+
+              <div class="skill__category">
+                <h4>Programming</h4>
+                <div class="skill__tags">
+                  <span>C++</span>
+                  <span>Java</span>
+                  <span>Python</span>
+                  <span>DSA</span>
+                </div>
+              </div>
+
+              <div class="skill__category">
+                <h4>Tools & Others</h4>
+                <div class="skill__tags">
+                  <span>Git</span>
+                  <span>GitHub</span>
+                  <span>Postman</span>
+                  <span>VS Code</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about__image">
+          <img src="./assets/img/third image.jpg" alt="About Gulshan Kumar" />
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="contact">
+      <div class="container contact__container">
+        <div class="contact__image">
+          <img src="./assets/img/second image.jpg" alt="Contact Gulshan Kumar" />
+        </div>
+
+        <div class="contact__content">
+          <h2 class="section__title">Let's Collaborate</h2>
+          <p class="contact__intro">
+            Have a project in mind or want to collaborate? I'm always open to discussing new opportunities, creative
+            ideas, or partnerships. Feel free to reach out!
+          </p>
+
+          <div class="contact__cards">
+            <div class="contact__card">
+              <ion-icon name="mail"></ion-icon>
+              <div>
+                <strong>Email</strong>
+                <a href="mailto:kg8726321083@gmail.com">kg8726321083@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact__card">
+              <ion-icon name="call"></ion-icon>
+              <div>
+                <strong>Phone</strong>
+                <a href="tel:+918726321083">+91 8726321083</a>
+              </div>
+            </div>
+
+            <div class="contact__card">
+              <ion-icon name="logo-linkedin"></ion-icon>
+              <div>
+                <strong>LinkedIn</strong>
+                <a href="https://www.linkedin.com/in/gulshan-kumar-192852378/" target="_blank">Gulshan Kumar</a>
+              </div>
+            </div>
+
+            <div class="contact__card">
+              <ion-icon name="logo-github"></ion-icon>
+              <div>
+                <strong>GitHub</strong>
+                <a href="https://github.com/Gulshankartikk" target="_blank">@Gulshankartikk</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer__container">
+      <div class="footer__grid">
+        <!-- About Column -->
+        <div class="footer__column">
+          <h3>Gulshan Kumar</h3>
+          <p>Full Stack MERN Developer passionate about building scalable web applications with clean UI & secure
+            backend.</p>
+        </div>
+
+        <!-- Quick Links Column -->
+        <div class="footer__column">
+          <h3>Quick Links</h3>
+          <ul class="footer__links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
 
-
-
-        <div id="projects" class="detail-section">
-          <h2>My Projects</h2>
-          <p>
-            Here are some of the projects I've worked on:<br><br>
-            • <strong>Portfolio Website:</strong> Responsive personal portfolio with dark/light theme<br>
-            • <strong>Web Applications:</strong> Full-stack projects using modern frameworks<br>
-            • <strong>DSA Solutions:</strong> Optimized algorithms and data structure implementations<br>
-            • <strong>Open Source Contributions:</strong> Contributing to community projects<br>
-            • <strong>Academic Projects:</strong> University coursework and research projects<br><br>
-            <em>Upload your completed projects to showcase your work!</em>
-          </p>
-          <button onclick="closeDetail('projects')">Close</button>
+        <!-- Contact Column -->
+        <div class="footer__column">
+          <h3>Get In Touch</h3>
+          <ul class="footer__contact">
+            <li>
+              <ion-icon name="mail"></ion-icon> kg8726321083@gmail.com
+            </li>
+            <li>
+              <ion-icon name="call"></ion-icon> +91 8726321083
+            </li>
+            <li>
+              <ion-icon name="location"></ion-icon> India
+            </li>
+          </ul>
         </div>
 
-        <div id="services" class="detail-section">
-          <h2>Services</h2>
-          <p>
-            • Full Stack Web Development<br>
-            • Frontend Development (HTML, CSS, JavaScript)<br>
-            • Backend Development (Python, Java)<br>
-            • Data Structures & Algorithms Solutions<br>
-            • Code Optimization & Performance Tuning
-          </p>
-          <button onclick="closeDetail('services')">Close</button>
-        </div>
-
-        <div id="blog" class="detail-section">
-          <h2>Blog</h2>
-          <p>
-            Welcome to my tech blog! Here I share insights about:<br><br>
-            • Programming tutorials and tips<br>
-            • DSA problem-solving approaches<br>
-            • Web development best practices<br>
-            • Latest technology trends<br>
-            • My coding journey and experiences
-          </p>
-          <button onclick="closeDetail('blog')">Close</button>
-        </div>
-
-        <div id="achievements" class="detail-section">
-          <h2>Achievements</h2>
-          <p>
-            • <strong>Academic Excellence:</strong> Consistent top performer in Computer Science coursework<br>
-            • <strong>Programming Contests:</strong> Participated in multiple coding competitions<br>
-            • <strong>Project Recognition:</strong> Developed innovative web applications<br>
-            • <strong>Technical Skills:</strong> Mastered multiple programming languages<br>
-            • <strong>Problem Solving:</strong> Solved 90+ DSA problems across platforms<br>
-            • <strong>Leadership:</strong> Led technical projects and mentored junior students
-          </p>
-          <button onclick="closeDetail('achievements')">Close</button>
-        </div>
-
-        <div id="hobbies" class="detail-section">
-          <h2>Hobbies & Interests</h2>
-          <p>
-            • <strong>Coding:</strong> Passionate about exploring new technologies and frameworks<br>
-            • <strong>Open Source:</strong> Contributing to community projects on GitHub<br>
-            • <strong>Tech Blogging:</strong> Writing about programming concepts and tutorials<br>
-            • <strong>Gaming:</strong> Strategy games and puzzle solving<br>
-            • <strong>Reading:</strong> Technology blogs, programming books, and sci-fi novels<br>
-            • <strong>Music:</strong> Listening to various genres while coding<br>
-            • <strong>Travel:</strong> Exploring new places and cultures
-          </p>
-          <button onclick="closeDetail('hobbies')">Close</button>
-        </div>
-
-
-
-        <div class="nav__actions">
-          <div class="theme-toggle" id="theme-toggle" onclick="toggleTheme()">
-            <ion-icon name="moon" id="theme-icon"></ion-icon>
-          </div>
-          <div class="nav__toggle" id="nav-toggle">
-            <ion-icon name="menu"></ion-icon>
+        <!-- Social Column -->
+        <div class="footer__column">
+          <h3>Follow Me</h3>
+          <div class="footer__social">
+            <a href="https://github.com/Gulshankartikk" target="_blank" aria-label="GitHub">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/gulshan-kumar-192852378/" target="_blank" aria-label="LinkedIn">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="https://twitter.com/Gulshankartikk" target="_blank" aria-label="Twitter">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
+            <a href="https://www.instagram.com/gulshan.kartik" target="_blank" aria-label="Instagram">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
           </div>
         </div>
-      </nav>
-    </header>
+      </div>
 
-    <!-- MAIN -->
-    <main class="l-main bd-grid">
-      <section id="home" class="home">
-        <div class="home__information">
-          <span class="home__pressent anime-text">Hello, My name is</span>
-          <h1 class="home__title anime-text">Gulshan kartik</h1>
-          <span class="home__skill anime-text">Web Developer</span>
+      <div class="footer__bottom">
+        <p class="footer__text">Built with ❤️ by Gulshan</p>
+        <p class="footer__copyright">© 2025 Gulshan Kumar. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
 
-          <div>
-            <a href="./assets/resume/resume kartik.pdf" download class="home__button anime-text">DOWNLOAD RESUME</a>
-          </div>
-        </div>
+  <!-- GSAP -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 
-        <div class="home__img">
-          <img src="./assets/img/taj mahal.jpg" alt="" />
-        </div>
+  <!-- MAIN JS -->
+  <script src="assets/js/portfolio.js"></script>
 
-        <div class="home__social">
-          <!-- Facebook -->
-          <a href="https://www.facebook.com/Gulshankartikk/" target="_blank">
-            <ion-icon name="logo-facebook" class="home__social-icon"></ion-icon>
-          </a>
+  <!-- ICONS -->
+  <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+</body>
 
-          <!-- Instagram -->
-          <a href="https://www.instagram.com/gulshan.kartik" target="_blank">
-            <ion-icon
-              name="logo-instagram"
-              class="home__social-icon"
-            ></ion-icon>
-          </a>
-
-          <!-- Twitter -->
-          <a href="https://twitter.com/Gulshankartikk" target="_blank">
-            <ion-icon name="logo-twitter" class="home__social-icon"></ion-icon>
-          </a>
-
-          <!-- GitHub -->
-          <a href="https://github.com/Gulshankartikk" target="_blank">
-            <ion-icon name="logo-github" class="home__social-icon"></ion-icon>
-          </a>
-
-          <!-- LinkedIn -->
-          <a
-            href="https://www.linkedin.com/in/gulshan-kumar-192852378/"
-            target="_blank"
-          >
-            <ion-icon name="logo-linkedin" class="home__social-icon"></ion-icon>
-          </a>
-        </div>
-      </section>
-
-      <!-- ABOUT SECTION -->
-      <section id="about" class="about-section">
-        <div class="section-content">
-          <div class="about-text">
-            <h2>About Me</h2>
-            <p>
-              I am a passionate and driven Full Stack Developer currently pursuing
-              a B.Tech in Computer Science (3rd year). I specialize in C++, Java
-              for Data Structures and Algorithms (DSA), and I am proficient in
-              Python and C for building efficient and scalable solutions in
-              front-end and back-end development. I am skilled in creating dynamic
-              web applications, optimizing code performance, and solving complex
-              programming challenges.
-            </p>
-            <p><strong>Skills:</strong> C++, Java, Python, JavaScript, HTML, CSS, DSA</p>
-            <p><strong>Education:</strong> B.Tech Computer Science (3rd Year)</p>
-          </div>
-          <div class="about-image">
-            <img src="./assets/img/third image.jpg" alt="About Me" />
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT SECTION -->
-      <section id="contact" class="contact-section">
-        <div class="section-content">
-          <div class="contact-image">
-            <img src="./assets/img/second image.jpg" alt="Contact Me" />
-          </div>
-          <div class="contact-text">
-            <h2>Contact Me </h2>
-            <p>
-              <strong>Email:</strong> <a href="kg8726321083@gmail.com">kg8726321083@gmail.com</a><br>
-              <strong>Phone:</strong> <a href="tel:+918726321083">+918726321083</a><br><br>
-              <strong>Social Media:</strong><br>
-              • <a href="https://www.linkedin.com/in/gulshan-kumar-192852378/" target="_blank">LinkedIn</a><br>
-              • <a href="https://github.com/Gulshankartikk" target="_blank">GitHub</a><br>
-              • <a href="https://twitter.com/Gulshankartikk" target="_blank">Twitter</a><br>
-              • <a href="https://www.facebook.com/Gulshankartikk/" target="_blank">Facebook</a><br>
-              • <a href="https://www.instagram.com/gulshan.kartik" target="_blank">Instagram</a>
-            </p>
-          </div>
-        </div>
-      </section>
-
-    </main>
-
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-
-    <!-- MAIN -->
-    <script src="assets/js/main.js"></script>
-
-    <!-- ICONS -->
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"
-    ></script>
-  </body>
 </html>

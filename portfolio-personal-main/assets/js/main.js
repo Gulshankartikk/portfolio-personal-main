@@ -31,6 +31,8 @@ function openDetail(id) {
   const el = document.getElementById(id);
   if (el) {
     el.classList.add('show');
+    // Show backdrop
+    showBackdrop();
   }
 }
 
@@ -38,6 +40,42 @@ function closeDetail(id) {
   const el = document.getElementById(id);
   if (el) {
     el.classList.remove('show');
+    // Hide backdrop
+    hideBackdrop();
+  }
+}
+
+function showHome() {
+  // Hide all detail sections to show home
+  document.querySelectorAll('.detail-section').forEach(section => {
+    section.classList.remove('show');
+  });
+  hideBackdrop();
+}
+
+// Backdrop functions
+function showBackdrop() {
+  let backdrop = document.getElementById('modal-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.id = 'modal-backdrop';
+    backdrop.className = 'modal-backdrop';
+    backdrop.onclick = () => {
+      document.querySelectorAll('.detail-section').forEach(section => {
+        section.classList.remove('show');
+      });
+      hideBackdrop();
+    };
+    document.body.appendChild(backdrop);
+  }
+  setTimeout(() => backdrop.classList.add('show'), 10);
+}
+
+function hideBackdrop() {
+  const backdrop = document.getElementById('modal-backdrop');
+  if (backdrop) {
+    backdrop.classList.remove('show');
+    setTimeout(() => backdrop.remove(), 300);
   }
 }
 
