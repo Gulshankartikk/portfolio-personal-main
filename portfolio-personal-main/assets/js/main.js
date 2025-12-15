@@ -3,7 +3,7 @@
 // ----------------------------
 const showMenu = (toggleId, navId) => {
   const toggle = document.getElementById(toggleId),
-        nav = document.getElementById(navId);
+    nav = document.getElementById(navId);
 
   if (toggle && nav) {
     toggle.addEventListener('click', () => {
@@ -16,7 +16,7 @@ const showMenu = (toggleId, navId) => {
     link.addEventListener('click', () => nav.classList.remove('show'));
   });
 }
-showMenu('nav-toggle','nav-menu');
+showMenu('nav-toggle', 'nav-menu');
 
 // ----------------------------
 // 2. Detail Section Functions
@@ -26,16 +26,13 @@ function openDetail(id) {
   document.querySelectorAll('.detail-section').forEach(section => {
     section.classList.remove('show');
   });
-  
+
   // Show the requested section
   const el = document.getElementById(id);
   if (el) {
     el.classList.add('show');
-<<<<<<< HEAD
     // Show backdrop
     showBackdrop();
-=======
->>>>>>> 71cb6dd25c261496b6265752e75d7c6705ab36b6
   }
 }
 
@@ -43,7 +40,6 @@ function closeDetail(id) {
   const el = document.getElementById(id);
   if (el) {
     el.classList.remove('show');
-<<<<<<< HEAD
     // Hide backdrop
     hideBackdrop();
   }
@@ -80,16 +76,7 @@ function hideBackdrop() {
   if (backdrop) {
     backdrop.classList.remove('show');
     setTimeout(() => backdrop.remove(), 300);
-=======
->>>>>>> 71cb6dd25c261496b6265752e75d7c6705ab36b6
   }
-}
-
-function showHome() {
-  // Hide all detail sections to show home
-  document.querySelectorAll('.detail-section').forEach(section => {
-    section.classList.remove('show');
-  });
 }
 
 // ----------------------------
@@ -98,7 +85,7 @@ function showHome() {
 function toggleTheme() {
   const body = document.body;
   const themeIcon = document.getElementById('theme-icon');
-  
+
   if (body.getAttribute('data-theme') === 'light') {
     body.removeAttribute('data-theme');
     themeIcon.setAttribute('name', 'moon');
@@ -114,7 +101,7 @@ function toggleTheme() {
 document.addEventListener('DOMContentLoaded', () => {
   const savedTheme = localStorage.getItem('theme');
   const themeIcon = document.getElementById('theme-icon');
-  
+
   if (savedTheme === 'light') {
     document.body.setAttribute('data-theme', 'light');
     themeIcon.setAttribute('name', 'sunny');
@@ -127,19 +114,20 @@ document.addEventListener('DOMContentLoaded', () => {
 const tl = gsap.timeline();
 
 // Overlay Animation
-tl.to(".first", {duration: 1.5, top: "-100%", ease: "expo.inOut", delay: 0.5})
-  .to(".second", {duration: 1.5, top: "-100%", ease: "expo.inOut"}, "-=1.3")
-  .to(".third", {duration: 1.5, top: "-100%", ease: "expo.inOut"}, "-=1.3")
+tl.to(".first", { duration: 1.5, top: "-100%", ease: "expo.inOut", delay: 0.5 })
+  .to(".second", { duration: 1.5, top: "-100%", ease: "expo.inOut" }, "-=1.3")
+  .to(".third", { duration: 1.5, top: "-100%", ease: "expo.inOut" }, "-=1.3")
 
-// Home Image
-  .from('.home__img', {opacity:0, x:60, duration:2}, "-=0.5")
+  // Hero Image
+  .from('.hero__image', { opacity: 0, x: 60, duration: 2 }, "-=0.5")
 
-// Home Text (staggered)
-  .from('.anime-text', {opacity:0, y:25, duration:3, stagger:0.3, ease:'expo.out'}, "-=1")
+  // Hero Text (staggered)
+  .from('.anime-text', { opacity: 0, y: 25, duration: 3, stagger: 0.3, ease: 'expo.out' }, "-=1")
 
-// Nav Logo & Items
-  .from('.nav__logo', {opacity:0, y:25, duration:2, ease:'expo.out'}, "-=2")
-  .from('.nav__item', {opacity:0, y:25, duration:2, stagger:0.2, ease:'expo.out'}, "-=1.5")
+  // Nav Logo & Items
+  .from('.nav__logo', { opacity: 0, y: 25, duration: 2, ease: 'expo.out' }, "-=2")
+  .from('.nav__item', { opacity: 0, y: 25, duration: 2, stagger: 0.2, ease: 'expo.out' }, "-=1.5")
 
-// Social Icons
-  .from('.home__social-icon', {opacity:0, y:25, duration:2, stagger:0.2, ease:'expo.out'}, "-=1.5");
+  // Social Icons
+  .from('.hero__social a', { opacity: 0, y: 25, duration: 2, stagger: 0.2, ease: 'expo.out' }, "-=1.5");
+

@@ -921,14 +921,14 @@ button {
 /* ===== ANIMATIONS ===== */
 .overlay {
     position: fixed;
-    top: -100%;
+    top: 0;
     left: 0;
     width: 33.33%;
     height: 100%;
     background-color: var(--primary-color);
     z-index: 9999;
     pointer-events: none;
-    display: none;
+    display: block;
 }
 
 .overlay.first {
