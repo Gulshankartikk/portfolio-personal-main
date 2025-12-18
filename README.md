@@ -525,13 +525,13 @@ For shared hosting (cPanel, etc.):
 ## 📸 Screenshots
 
 ### Desktop View - Hero Section
-![Desktop Hero Section](Screenshot%202025-10-27%20215800.png)
+![Desktop Hero Section]()
 
 ### Projects Section
-![Projects Showcase](Screenshot%202025-10-27%20215822.png)
+![Projects Showcase]()
 
 ### About & Contact Section
-![About and Contact](Screenshot%202025-10-27%20215838.png)
+![About and Contact]()
 
 ---
 
