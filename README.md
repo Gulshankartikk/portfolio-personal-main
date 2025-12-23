@@ -66,32 +66,8 @@ git push -u origin main
 # Visit https://vercel.com/new and import your repository
 ```
 
-That's it! Your portfolio will be live in under 2 minutes. ✨
-
-## 📦 Deployment
-
-### Deploy to Vercel (Recommended)
-
-The `vercel.json` configuration is already set up to fix the 404 error and handle routing properly.
-
-1. **Push to GitHub:**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/Gulshankartikk/portfolio-personal-main.git
-   git push -u origin main
-   ```
-
-2. **Deploy on Vercel:**
-   - Go to [https://vercel.com/new](https://vercel.com/new)
-   - Click "Import Project"
-   - Select your GitHub repository
-   - Click "Deploy" (configuration is auto-detected)
+That's it! Your portfolio will be live in under 2 minutes. 
    
-
-
 
 ## 💻 Local Development
 
@@ -101,19 +77,7 @@ The `vercel.json` configuration is already set up to fix the 404 error and handl
    cd portfolio-personal-main
    ```
 
-2. **Open in browser:**
-   - Simply open `index.html` in your browser
-   - Or use a local server:
-     ```bash
-     # Using Python
-     python -m http.server 8000
-     
-     # Using Node.js (http-server)
-     npx http-server
-     
-     # Using VS Code Live Server extension
-     Right-click on index.html → Open with Live Server
-     ```
+
 
 
 ## 📱 Sections
@@ -124,21 +88,7 @@ The `vercel.json` configuration is already set up to fix the 404 error and handl
 4. **Contact** - Contact information and social links
 5. **Footer** - Additional links and information
 
-## 🐛 Troubleshooting
 
-### 404 Error on Vercel
-- ✅ **Fixed!** The `vercel.json` configuration file handles all routing
-- Ensure `vercel.json` is in the root directory
-- Redeploy after adding the configuration
-
-### Assets Not Loading
-- Check that all paths use relative URLs (`./assets/...` or `assets/...`)
-- Verify file names match exactly (case-sensitive on some servers)
-
-### Theme Not Persisting
-- Ensure JavaScript is enabled
-- Check browser console for errors
-- Clear browser cache and localStorage
 
 ## 📄 License
 
