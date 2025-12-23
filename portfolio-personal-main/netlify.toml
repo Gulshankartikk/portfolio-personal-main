@@ -2,9 +2,6 @@
 # https://docs.netlify.com/configure-builds/file-based-configuration/
 
 [build]
-  # Base directory where the project files are located
-  base = "portfolio-personal-main"
-  
   # Directory to publish (current directory)
   publish = "."
   
