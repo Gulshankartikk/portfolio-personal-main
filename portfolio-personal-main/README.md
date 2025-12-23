@@ -144,6 +144,21 @@ The `vercel.json` configuration is already set up to fix the 404 error and handl
 
 This project is open source and available under the [MIT License](LICENSE).
 
+## 📸 Screenshots
+
+### Desktop View - Hero Section
+![Desktop Hero Section](https://github.com/Gulshankartikk/portfolio-personal-main/blob/9f19c4965850eac60d48bbe3f2409b778807eaad/Screenshot%20(41).png)
+
+### Projects Section
+![Projects Showcase](https://github.com/Gulshankartikk/portfolio-personal-main/blob/9f19c4965850eac60d48bbe3f2409b778807eaad/Screenshot%20(42).png)
+
+### About 
+![About ](https://github.com/Gulshankartikk/portfolio-personal-main/blob/9f19c4965850eac60d48bbe3f2409b778807eaad/Screenshot%20(44).png)
+###  Skills 
+![About ](https://github.com/Gulshankartikk/portfolio-personal-main/blob/9f19c4965850eac60d48bbe3f2409b778807eaad/Screenshot%20(43).png)
+
+---
+
 ## 👤 Author
 
 **Gulshan Kumar**
