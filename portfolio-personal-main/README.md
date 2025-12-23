@@ -7,6 +7,12 @@ A modern, responsive personal portfolio website showcasing my work as a Full Sta
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
 
+## 🎯 Status
+
+✅ **Deployment Ready** - Vercel 404 error fixed with proper configuration  
+✅ **Optimized** - Clean codebase with only essential files  
+✅ **Production Ready** - Fully tested and ready to deploy
+
 ## ✨ Features
 
 - 🎨 **Modern UI/UX** - Clean, professional design with smooth animations
@@ -31,23 +37,48 @@ A modern, responsive personal portfolio website showcasing my work as a Full Sta
 portfolio-personal-main/
 ├── assets/
 │   ├── css/
-│   │   ├── portfolio.css      # Main styles
-│   │   ├── styles.css          # Additional styles
-│   │   └── ui-fixes.css        # UI refinements
+│   │   └── portfolio.css      # Main stylesheet
 │   ├── js/
-│   │   ├── portfolio.js        # Main JavaScript
-│   │   └── main.js             # Additional scripts
+│   │   └── portfolio.js        # Main JavaScript
 │   ├── img/                    # Images
-│   ├── resume/                 # Resume files
-│   └── sass/                   # SASS source files
+│   │   ├── second image.jpg
+│   │   ├── taj mahal.jpg
+│   │   └── third image.jpg
+│   └── resume/                 # Resume PDF
+│       └── resume kartik.pdf
 ├── index.html                  # Main HTML file
-├── vercel.json                 # Vercel deployment config
-└── .vercelignore              # Vercel ignore file
+├── vercel.json                 # Vercel deployment config (fixes 404)
+├── .vercelignore              # Vercel ignore file
+└── README.md                   # Project documentation
 ```
 
-## 🚀 Deployment
+**Note:** This is a clean, optimized structure with only essential files. All unused CSS, JS, and source files have been removed.
+
+## 🚀 Quick Start
+
+Ready to deploy in 3 simple steps:
+
+```bash
+# 1. Commit your changes
+git add .
+git commit -m "Deploy portfolio website"
+
+# 2. Push to GitHub
+git remote add origin https://github.com/Gulshankartikk/portfolio-personal-main.git
+git branch -M main
+git push -u origin main
+
+# 3. Deploy on Vercel
+# Visit https://vercel.com/new and import your repository
+```
+
+That's it! Your portfolio will be live in under 2 minutes. ✨
+
+## 📦 Deployment
 
 ### Deploy to Vercel (Recommended)
+
+The `vercel.json` configuration is already set up to fix the 404 error and handle routing properly.
 
 1. **Push to GitHub:**
    ```bash
@@ -60,35 +91,42 @@ portfolio-personal-main/
    ```
 
 2. **Deploy on Vercel:**
-   - Go to [Vercel](https://vercel.com)
-   - Click "New Project"
-   - Import your GitHub repository
-   - Vercel will automatically detect the configuration from `vercel.json`
-   - Click "Deploy"
+   - Go to [https://vercel.com/new](https://vercel.com/new)
+   - Click "Import Project"
+   - Select your GitHub repository
+   - Click "Deploy" (configuration is auto-detected)
+   - ✅ Done! No 404 errors!
 
-3. **Configuration:**
-   The `vercel.json` file is already configured to handle routing properly:
-   ```json
-   {
-     "version": 2,
-     "builds": [
-       {
-         "src": "index.html",
-         "use": "@vercel/static"
-       }
-     ],
-     "routes": [
-       {
-         "src": "/assets/(.*)",
-         "dest": "/assets/$1"
-       },
-       {
-         "src": "/(.*)",
-         "dest": "/index.html"
-       }
-     ]
-   }
-   ```
+### vercel.json Configuration
+
+The project includes a `vercel.json` file that fixes deployment issues:
+
+```json
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "index.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/assets/(.*)",
+      "dest": "/assets/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/index.html"
+    }
+  ]
+}
+```
+
+**What this does:**
+- Routes all requests to `index.html`
+- Properly handles asset paths (`/assets/*`)
+- Uses `@vercel/static` builder for optimal performance
 
 ### Alternative Deployment Options
 
