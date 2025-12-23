@@ -3,15 +3,9 @@
 A modern, responsive personal portfolio website showcasing my work as a Full Stack MERN Developer.
 
 ![Portfolio Preview](https://img.shields.io/badge/Status-Live-success)
-![HTML5](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
+![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
+![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
-
-## 🎯 Status
-
-✅ **Deployment Ready** - Vercel 404 error fixed with proper configuration  
-✅ **Optimized** - Clean codebase with only essential files  
-✅ **Production Ready** - Fully tested and ready to deploy
 
 ## ✨ Features
 
@@ -95,49 +89,9 @@ The `vercel.json` configuration is already set up to fix the 404 error and handl
    - Click "Import Project"
    - Select your GitHub repository
    - Click "Deploy" (configuration is auto-detected)
-   - ✅ Done! No 404 errors!
+   
 
-### vercel.json Configuration
 
-The project includes a `vercel.json` file that fixes deployment issues:
-
-```json
-{
-  "version": 2,
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/assets/(.*)",
-      "dest": "/assets/$1"
-    },
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ]
-}
-```
-
-**What this does:**
-- Routes all requests to `index.html`
-- Properly handles asset paths (`/assets/*`)
-- Uses `@vercel/static` builder for optimal performance
-
-### Alternative Deployment Options
-
-#### Netlify
-1. Drag and drop the project folder to [Netlify Drop](https://app.netlify.com/drop)
-2. Or connect your GitHub repository
-
-#### GitHub Pages
-1. Go to repository Settings → Pages
-2. Select branch `main` and root folder
-3. Save and wait for deployment
 
 ## 💻 Local Development
 
@@ -161,37 +115,6 @@ The project includes a `vercel.json` file that fixes deployment issues:
      Right-click on index.html → Open with Live Server
      ```
 
-3. **View in browser:**
-   - Navigate to `http://localhost:8000` (or the port shown)
-
-## 🎨 Customization
-
-### Update Personal Information
-
-1. **Edit `index.html`:**
-   - Update name, title, and description in the hero section
-   - Modify project details
-   - Update contact information
-   - Change social media links
-
-2. **Update Styles:**
-   - Main colors and theme in `assets/css/portfolio.css`
-   - CSS custom properties at the top of the file
-
-3. **Add/Update Projects:**
-   - Edit the projects section in `index.html`
-   - Add project images to `assets/img/`
-
-### Theme Colors
-
-Edit CSS custom properties in `portfolio.css`:
-```css
-:root {
-  --primary-color: #6366f1;
-  --secondary-color: #8b5cf6;
-  /* ... other colors */
-}
-```
 
 ## 📱 Sections
 
