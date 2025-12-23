@@ -449,89 +449,24 @@ This portfolio can be deployed to various hosting platforms. Here are the most p
 
 **Note**: If your files are in a nested folder, you may need to adjust the deployment folder or restructure your repository.
 
-### Vercel (Recommended - Free)
-1. **Install Vercel CLI** (optional)
-   ```bash
-   npm i -g vercel
-   ```
 
-2. **Deploy via CLI**
-   ```bash
-   cd portfolio-personal-main
-   vercel
-   ```
 
-3. **Or deploy via Web**
-   - Visit [vercel.com](https://vercel.com)
-   - Import your GitHub repository
-   - Configure root directory: `portfolio-personal-main`
-   - Deploy
 
-**Advantages**: Automatic deployments, custom domains, SSL, and edge network.
 
-### Netlify (Free)
-1. **Drag and Drop**
-   - Visit [netlify.com](https://netlify.com)
-   - Drag the `portfolio-personal-main` folder
-   - Done!
 
-2. **Or connect GitHub**
-   - Click "New site from Git"
-   - Connect your repository
-   - Base directory: `portfolio-personal-main`
-   - Build command: (leave empty)
-   - Publish directory: `.` or `./`
-   - Deploy
-
-**Advantages**: Instant rollbacks, form handling, and serverless functions.
-
-### Cloudflare Pages (Free)
-1. **Connect GitHub repository**
-   - Visit [pages.cloudflare.com](https://pages.cloudflare.com)
-   - Create a new project
-   - Connect your GitHub account
-   - Select repository
-
-2. **Configure build**
-   - Build command: (leave empty)
-   - Build output directory: `portfolio-personal-main`
-   - Deploy
-
-**Advantages**: Global CDN, unlimited bandwidth, and DDoS protection.
-
-### Custom Domain Setup
-After deploying to any platform:
-
-1. **Purchase a domain** (from Namecheap, GoDaddy, Google Domains, etc.)
-
-2. **Configure DNS**
-   - Add A record or CNAME record pointing to your hosting provider
-   - Each platform provides specific DNS instructions
-
-3. **Update hosting settings**
-   - Add custom domain in your hosting platform's settings
-   - Enable SSL/HTTPS (usually automatic)
-
-4. **Wait for DNS propagation** (can take 24-48 hours)
-
-### Traditional Web Hosting
-For shared hosting (cPanel, etc.):
-1. Upload files via FTP/SFTP
-2. Place in `public_html` or `www` directory
-3. Access via your domain
-
----
 
 ## 📸 Screenshots
 
 ### Desktop View - Hero Section
-![Desktop Hero Section]()
+![Desktop Hero Section](https://github.com/Gulshankartikk/portfolio-personal-main/blob/9f19c4965850eac60d48bbe3f2409b778807eaad/Screenshot%20(41).png)
 
 ### Projects Section
-![Projects Showcase]()
+![Projects Showcase](https://github.com/Gulshankartikk/portfolio-personal-main/blob/9f19c4965850eac60d48bbe3f2409b778807eaad/Screenshot%20(42).png)
 
-### About & Contact Section
-![About and Contact]()
+### About 
+![About ](https://github.com/Gulshankartikk/portfolio-personal-main/blob/9f19c4965850eac60d48bbe3f2409b778807eaad/Screenshot%20(44).png)
+###  Skills 
+![About ](https://github.com/Gulshankartikk/portfolio-personal-main/blob/9f19c4965850eac60d48bbe3f2409b778807eaad/Screenshot%20(43).png)
 
 ---
 
@@ -570,7 +505,7 @@ For shared hosting (cPanel, etc.):
 - ✅ Lightweight codebase with minimal external dependencies
 - ✅ GSAP loaded from CDN for optimal caching
 - ✅ Ionicons loaded efficiently with module support
-- ⚠️ Image optimization recommended (see below)
+
 
 ### Recommended Optimizations
 
@@ -652,7 +587,7 @@ Consider optimizing these images for better performance if needed.
 - ✅ Firefox
 - ✅ Safari
 - ✅ Edge
-- ⚠️ IE11 (limited support)
+
 
 ---
 
