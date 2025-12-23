@@ -724,20 +724,21 @@ button {
 }
 
 .skill__tags span {
-    background: linear-gradient(135deg, rgba(78, 17, 22, 0.8), rgba(109, 26, 31, 0.8));
-    color: var(--text-white);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    color: #ffffff;
     padding: 0.5rem 1rem;
     border-radius: 20px;
     font-size: 0.85rem;
     font-weight: var(--font-semibold);
     transition: all 0.3s ease;
-    border: 1px solid transparent;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
 .skill__tags span:hover {
     transform: scale(1.1);
-    background: var(--primary-color);
-    border-color: var(--text-white);
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary-color));
+    border-color: rgba(255, 255, 255, 0.4);
     box-shadow: 0 4px 15px rgba(78, 17, 22, 0.4);
 }
 

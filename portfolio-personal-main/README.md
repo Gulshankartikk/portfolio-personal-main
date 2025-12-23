@@ -1,180 +1,159 @@
 # 💼 Gulshan Kumar - Portfolio Website
 
-A modern, responsive personal portfolio website showcasing my work as a Full Stack MERN Developer.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-brightgreen)](https://your-portfolio-url.vercel.app)
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](docs/LICENSE)
 
-![Portfolio Preview](https://img.shields.io/badge/Status-Live-success)
-![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS3-1572B6?logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)
+> A modern, responsive personal portfolio showcasing Full Stack MERN development expertise with smooth animations and professional design.
+
+## 📸 Preview
+
+### Hero Section
+![Hero Section](docs/screenshots/hero-section.png)
+
+### Projects
+![Projects](docs/screenshots/projects-section.png)
+
+### About & Skills
+![About](docs/screenshots/about-section.png)
+
+### Contact
+![Contact](docs/screenshots/contact-section.png)
+
+### Dark Mode
+![Dark Mode](docs/screenshots/dark-mode.png)
 
 ## ✨ Features
 
-- 🎨 **Modern UI/UX** - Clean, professional design with smooth animations
-- 🌓 **Dark/Light Theme** - Toggle between themes with persistent preference
-- 📱 **Fully Responsive** - Optimized for all devices (mobile, tablet, desktop)
-- ⚡ **Fast Performance** - Lightweight and optimized for speed
-- 🎭 **GSAP Animations** - Smooth, professional animations
-- 📧 **Contact Section** - Easy ways to get in touch
-- 🚀 **SEO Optimized** - Proper meta tags and semantic HTML
+- 🎨 Modern UI with dark/light theme toggle
+- 📱 Fully responsive design
+- ⚡ GSAP animations
+- 🔍 SEO optimized
+- 🚀 Fast performance
 
 ## 🛠️ Tech Stack
 
-- **HTML5** - Semantic markup
-- **CSS3** - Modern styling with custom properties
-- **JavaScript (ES6+)** - Interactive functionality
-- **GSAP** - Animation library
-- **Ionicons** - Icon library
+**Frontend:** HTML5, CSS3, JavaScript (ES6+)  
+**Libraries:** GSAP, Ionicons  
+**Deployment:** Vercel, Netlify, GitHub Pages
 
-## 📂 Project Structure
+## 📁 Project Structure
 
 ```
 portfolio-personal-main/
-├── assets/
-│   ├── css/
-│   │   └── portfolio.css      # Main stylesheet
-│   ├── js/
-│   │   └── portfolio.js        # Main JavaScript
-│   ├── img/                    # Images
-│   │   ├── second image.jpg
-│   │   ├── taj mahal.jpg
-│   │   └── third image.jpg
-│   └── resume/                 # Resume PDF
-│       └── resume kartik.pdf
-├── index.html                  # Main HTML file
-├── vercel.json                 # Vercel deployment config (fixes 404)
-├── .vercelignore              # Vercel ignore file
-└── README.md                   # Project documentation
+├── index.html              # Main HTML file
+├── README.md               # Documentation
+├── .gitignore             # Git ignore rules
+│
+├── assets/                # Static assets
+│   ├── css/              # Stylesheets
+│   ├── js/               # JavaScript files
+│   ├── img/              # Images
+│   └── resume/           # Resume PDF
+│
+├── config/               # Deployment configurations
+│   ├── vercel.json      # Vercel config
+│   ├── netlify.toml     # Netlify config
+│   └── .vercelignore    # Vercel ignore rules
+│
+├── docs/                 # Documentation & screenshots
+│   ├── screenshots/     # Portfolio screenshots
+│   └── LICENSE          # MIT License
+│
+└── .github/              # GitHub workflows
+    └── workflows/
+        └── deploy.yml    # GitHub Pages deployment
 ```
 
-**Note:** This is a clean, optimized structure with only essential files. All unused CSS, JS, and source files have been removed.
+## 🚀 Quick Deploy
 
-## 🚀 Quick Start
-
-Ready to deploy in 3 simple steps:
-
+### Vercel (Recommended)
 ```bash
-# 1. Commit your changes
-git add .
-git commit -m "Deploy portfolio website"
-
-# 2. Push to GitHub
-git remote add origin https://github.com/Gulshankartikk/portfolio-personal-main.git
-git branch -M main
-git push -u origin main
-
-# 3. Deploy on Vercel
-# Visit https://vercel.com/new and import your repository
+npm install -g vercel
+vercel
+vercel --prod
 ```
 
-That's it! Your portfolio will be live in under 2 minutes. ✨
+### Netlify
+```bash
+npm install -g netlify-cli
+netlify login
+netlify init
+netlify deploy --prod
+```
 
-## 📦 Deployment
-
-### Deploy to Vercel (Recommended)
-
-The `vercel.json` configuration is already set up to fix the 404 error and handle routing properly.
-
-1. **Push to GitHub:**
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit"
-   git branch -M main
-   git remote add origin https://github.com/Gulshankartikk/portfolio-personal-main.git
-   git push -u origin main
-   ```
-
-2. **Deploy on Vercel:**
-   - Go to [https://vercel.com/new](https://vercel.com/new)
-   - Click "Import Project"
-   - Select your GitHub repository
-   - Click "Deploy" (configuration is auto-detected)
-   
-
-
+### GitHub Pages
+1. Push to GitHub
+2. Go to Settings → Pages
+3. Select "GitHub Actions" as source
+4. Workflow will auto-deploy
 
 ## 💻 Local Development
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/Gulshankartikk/portfolio-personal-main.git
-   cd portfolio-personal-main
-   ```
+```bash
+# Using Live Server (VS Code)
+# Right-click index.html → Open with Live Server
 
-2. **Open in browser:**
-   - Simply open `index.html` in your browser
-   - Or use a local server:
-     ```bash
-     # Using Python
-     python -m http.server 8000
-     
-     # Using Node.js (http-server)
-     npx http-server
-     
-     # Using VS Code Live Server extension
-     Right-click on index.html → Open with Live Server
-     ```
+# Using Python
+python -m http.server 8000
 
+# Using Node.js
+npx http-server -p 8000
+```
 
-## 📱 Sections
+Visit: `http://localhost:8000`
 
-1. **Hero** - Introduction with CTA buttons
-2. **Projects** - Showcase of featured and other projects
-3. **About** - Personal information and skills
-4. **Contact** - Contact information and social links
-5. **Footer** - Additional links and information
+## 🎨 Customization
+
+1. **Personal Info:** Edit `index.html`
+2. **Styling:** Modify `assets/css/portfolio.css`
+3. **Images:** Replace files in `assets/img/`
+4. **Resume:** Update `assets/resume/resume kartik.pdf`
+
+## 📊 Deployment Platforms
+
+| Platform | Deploy Time | Custom Domain | SSL |
+|----------|-------------|---------------|-----|
+| Vercel | 2 min | ✅ | ✅ |
+| Netlify | 2 min | ✅ | ✅ |
+| GitHub Pages | 3 min | ✅ | ✅ |
+| Render | 3 min | ✅ | ✅ |
+| Firebase | 4 min | ✅ | ✅ |
 
 ## 🐛 Troubleshooting
 
-### 404 Error on Vercel
-- ✅ **Fixed!** The `vercel.json` configuration file handles all routing
-- Ensure `vercel.json` is in the root directory
-- Redeploy after adding the configuration
+**Animations not working?**  
+→ Check GSAP CDN is loading
 
-### Assets Not Loading
-- Check that all paths use relative URLs (`./assets/...` or `assets/...`)
-- Verify file names match exactly (case-sensitive on some servers)
+**Theme not persisting?**  
+→ Enable localStorage in browser
 
-### Theme Not Persisting
-- Ensure JavaScript is enabled
-- Check browser console for errors
-- Clear browser cache and localStorage
+**Images not loading?**  
+→ Verify paths in `index.html`
 
-## 📄 License
+**404 on deployment?**  
+→ Check config files in `config/` folder
 
-This project is open source and available under the [MIT License](LICENSE).
+## 📝 License
 
-## 📸 Screenshots
-
-### Desktop View - Hero Section
-![Desktop Hero Section](https://github.com/Gulshankartikk/portfolio-personal-main/blob/9f19c4965850eac60d48bbe3f2409b778807eaad/Screenshot%20(41).png)
-
-### Projects Section
-![Projects Showcase](https://github.com/Gulshankartikk/portfolio-personal-main/blob/9f19c4965850eac60d48bbe3f2409b778807eaad/Screenshot%20(42).png)
-
-### About 
-![About ](https://github.com/Gulshankartikk/portfolio-personal-main/blob/9f19c4965850eac60d48bbe3f2409b778807eaad/Screenshot%20(44).png)
-###  Skills 
-![About ](https://github.com/Gulshankartikk/portfolio-personal-main/blob/9f19c4965850eac60d48bbe3f2409b778807eaad/Screenshot%20(43).png)
-
----
+MIT License - see [docs/LICENSE](docs/LICENSE)
 
 ## 👤 Author
 
-**Gulshan Kumar**
+**Gulshan Kumar** - Full Stack MERN Developer
 
-- GitHub: [@Gulshankartikk](https://github.com/Gulshankartikk)
-- LinkedIn: [Gulshan Kumar](https://www.linkedin.com/in/gulshan-kumar-192852378/)
-- Email: kg8726321083@gmail.com
+- 🌐 GitHub: [@Gulshankartikk](https://github.com/Gulshankartikk)
+- 💼 LinkedIn: [Gulshan Kumar](https://www.linkedin.com/in/gulshan-kumar-192852378/)
+- 📧 Email: kg8726321083@gmail.com
+- 🐦 Twitter: [@Gulshankartikk](https://twitter.com/Gulshankartikk)
 
 ## 🙏 Acknowledgments
 
-- [GSAP](https://greensock.com/gsap/) - Animation library
-- [Ionicons](https://ionic.io/ionicons) - Icon library
-- [Vercel](https://vercel.com) - Hosting platform
+- [GSAP](https://greensock.com/gsap/) - Animations
+- [Ionicons](https://ionicons.com/) - Icons
+- [Google Fonts](https://fonts.google.com/) - Typography
 
 ---
 
-**Built with ❤️ by Gulshan Kumar**
+**Built with ❤️ by Gulshan Kumar** | *Last Updated: December 2025*
 
-© 2025 Gulshan Kumar. All rights reserved.
+⭐ Star this repo if you like it!
