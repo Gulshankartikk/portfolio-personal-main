@@ -9,22 +9,7 @@ A modern, responsive personal portfolio website showcasing my journey as a Full 
 
 ---
 
-## 📋 Table of Contents
 
-- [Overview](#-overview)
-- [Quick Start](#-quick-start)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Sections](#-sections)
-- [Installation](#-installation)
-- [Usage](#-usage)
-- [Customization](#-customization)
-- [Deployment](#-deployment)
-- [Screenshots](#-screenshots)
-- [Contact](#-contact)
-
----
 
 ## 🌟 Overview
 
@@ -292,25 +277,7 @@ portfolio-personal-main/
    ```
    **Note**: The project has a nested structure with the main files in `portfolio-personal-main/portfolio-personal-main/`
 
-3. **Open in Browser**
-   - Simply open `index.html` in your preferred browser
-   - Or use a local server (recommended):
-     ```bash
-     # Using Python
-     python -m http.server 8000
-     
-     # Using Node.js (http-server)
-     npx http-server
-     
-     # Using VS Code Live Server extension
-     Right-click on index.html → Open with Live Server
-     ```
 
-4. **Access the Website**
-   - Local file: `file:///path/to/portfolio-personal-main/portfolio-personal-main/index.html`
-   - Local server: `http://localhost:8000`
-
----
 
 ## 🎯 Usage
 
@@ -329,33 +296,8 @@ portfolio-personal-main/
 
 ---
 
-## 🎨 Customization
 
-### Updating Personal Information
 
-#### 1. Basic Information (index.html)
-```html
-<!-- Update name, title, and description -->
-<h1 class="hero__title">Hi, I'm [Your Name] 👋</h1>
-<h2 class="hero__subtitle">[Your Title]</h2>
-<p class="hero__description">[Your Description]</p>
-```
-
-#### 2. Contact Details
-```html
-<!-- Update email -->
-<a href="mailto:your-email@example.com">your-email@example.com</a>
-
-<!-- Update phone -->
-<a href="tel:+1234567890">+1 234 567 890</a>
-```
-
-#### 3. Social Media Links
-```html
-<!-- Update social media URLs -->
-<a href="https://github.com/yourusername" target="_blank">
-<a href="https://linkedin.com/in/yourprofile" target="_blank">
-```
 
 ### Styling Customization
 
@@ -507,42 +449,11 @@ This portfolio can be deployed to various hosting platforms. Here are the most p
 - ✅ Ionicons loaded efficiently with module support
 
 
-### Recommended Optimizations
 
-#### 1. Image Optimization
-The portfolio currently uses high-resolution images. Consider optimizing them:
 
-```bash
-# Using ImageMagick (install first)
-magick convert "taj mahal.jpg" -quality 85 -resize 1920x1080 "taj-mahal-optimized.jpg"
-magick convert "second image.jpg" -quality 85 -resize 1920x1080 "second-image-optimized.jpg"
-magick convert "third image.jpg" -quality 85 -resize 1920x1080 "third-image-optimized.jpg"
-```
 
-Or use online tools:
-- [TinyPNG](https://tinypng.com/) - Smart PNG and JPEG compression
-- [Squoosh](https://squoosh.app/) - Advanced image compression
-- [ImageOptim](https://imageoptim.com/) - Mac app for image optimization
 
-#### 2. Enable Caching
-Add a `.htaccess` file for Apache servers:
-```apache
-# Enable browser caching
-<IfModule mod_expires.c>
-  ExpiresActive On
-  ExpiresByType image/jpg "access plus 1 year"
-  ExpiresByType image/jpeg "access plus 1 year"
-  ExpiresByType image/png "access plus 1 year"
-  ExpiresByType text/css "access plus 1 month"
-  ExpiresByType application/javascript "access plus 1 month"
-</IfModule>
-```
 
-#### 3. Lazy Loading (Optional)
-For even better performance, add lazy loading to images:
-```html
-<img src="./assets/img/taj mahal.jpg" alt="Gulshan Kumar" loading="lazy" />
-```
 
 ### Performance Metrics
 After optimization, you should achieve:
@@ -635,93 +546,6 @@ Contributions, issues, and feature requests are welcome! Feel free to check the 
    - Describe your changes
    - Submit!
 
-### Contribution Ideas
-- 🐛 Bug fixes
-- ✨ New features
-- 📝 Documentation improvements
-- 🎨 UI/UX enhancements
-- ♿ Accessibility improvements
-- 🌐 Translations
-
----
-
-## ❓ FAQ (Frequently Asked Questions)
-
-### General Questions
-
-**Q: Do I need Node.js or npm to run this portfolio?**  
-A: No! This is a pure HTML/CSS/JavaScript portfolio. Just open `index.html` in a browser.
-
-**Q: Can I use this portfolio for my own website?**  
-A: Yes! This project is open source under the MIT License. Feel free to fork and customize it.
-
-**Q: How do I change the colors/theme?**  
-A: Edit the CSS variables in `assets/css/portfolio.css`. Look for the `:root` section at the top of the file.
-
-### Technical Questions
-
-**Q: Why are there two CSS files (portfolio.css and styles.css)?**  
-A: `portfolio.css` is currently active and contains all the modern styling. `styles.css` is an alternative stylesheet you can switch to if needed.
-
-**Q: How do I compile the SASS file?**  
-A: Install SASS globally (`npm install -g sass`) and run: `sass assets/sass/styles.scss assets/css/styles.css`
-
-**Q: The images are too large. How can I optimize them?**  
-A: See the [Performance & Optimization](#-performance--optimization) section for detailed instructions.
-
-**Q: Can I add more sections to the portfolio?**  
-A: Absolutely! Just follow the existing HTML structure and add your new section. Don't forget to update the navigation links.
-
-### Deployment Questions
-
-**Q: Why isn't my GitHub Pages site showing up?**  
-A: Check these:
-- Ensure GitHub Pages is enabled in Settings → Pages
-- Verify the correct branch and folder are selected
-- Wait a few minutes for deployment to complete
-- Check if your repository is public
-
-**Q: How do I add a custom domain?**  
-A: See the [Custom Domain Setup](#custom-domain-setup) section in the Deployment guide.
-
-**Q: Which hosting platform is best?**  
-A: For static sites like this, GitHub Pages, Vercel, and Netlify are all excellent free options. Choose based on your preference:
-- **GitHub Pages**: Best if you're already using GitHub
-- **Vercel**: Best for automatic deployments and edge network
-- **Netlify**: Best for additional features like forms and functions
-
-### Customization Questions
-
-**Q: How do I change my profile picture?**  
-A: Replace `assets/img/taj mahal.jpg` with your image, or update the `src` attribute in the HTML.
-
-**Q: How do I add more projects?**  
-A: Duplicate a project card in the HTML and update the content. The featured project and grid projects use different structures.
-
-**Q: Can I remove the dark/light theme toggle?**  
-A: Yes, but you'll need to remove the toggle button from the HTML and the related JavaScript in `portfolio.js`.
-
-**Q: How do I update my social media links?**  
-A: Find the social media links in `index.html` (in the hero section and footer) and update the `href` attributes.
-
-### Troubleshooting
-
-**Q: The animations aren't working.**  
-A: Ensure GSAP is loading correctly. Check your browser console for errors. Make sure you have an internet connection (GSAP loads from CDN).
-
-**Q: The icons aren't showing.**  
-A: Ionicons load from a CDN. Check your internet connection and browser console for errors.
-
-**Q: The mobile menu isn't working.**  
-A: Ensure `portfolio.js` is loading correctly. Check the browser console for JavaScript errors.
-
-**Q: Images aren't loading.**  
-A: Check that:
-- Image paths are correct
-- Images exist in the `assets/img/` folder
-- File names match exactly (including spaces and capitalization)
-
----
 
 ## 📝 License
 
