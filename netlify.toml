@@ -8,11 +8,6 @@
   # Build command (none needed for static site)
   command = ""
 
-# Redirect all requests to index.html for single-page app behavior
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
 
 # Security headers
 [[headers]]
