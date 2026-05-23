@@ -51,10 +51,9 @@
       <div class="container hero__container">
         <div class="hero__content">
           <h1 class="hero__title anime-text">Hi, I'm Gulshan 👋</h1>
-          <h2 class="hero__subtitle anime-text">Full Stack MERN Developer</h2>
+          <h2 class="hero__subtitle anime-text">Backend Focused & MERN Developer</h2>
           <p class="hero__description anime-text">
-            I build scalable web applications with clean UI & secure backend. Specialized in creating role-based
-            management systems and modern web solutions.
+            Specialized in Backend Architecture, Scalable Systems, and MERN stack. Based in Kanpur, Uttar Pradesh, India 📍. I build production-ready applications focusing on clean APIs, dockerization, and algorithmic efficiency.
           </p>
 
           <div class="hero__buttons anime-text">
@@ -64,6 +63,26 @@
             <a href="./assets/resume/Gulshankartikk resume.pdf" download class="btn btn--secondary">
               <ion-icon name="download"></ion-icon> Download Resume
             </a>
+          </div>
+
+          <!-- FLOATING STATS GRID -->
+          <div class="hero__stats-container anime-text">
+            <div class="hero__stat-card">
+              <h3>200+</h3>
+              <p>DSA Solves</p>
+            </div>
+            <div class="hero__stat-card">
+              <h3>3+</h3>
+              <p>Featured Projects</p>
+            </div>
+            <div class="hero__stat-card">
+              <h3>10+</h3>
+              <p>Technologies</p>
+            </div>
+            <div class="hero__stat-card">
+              <h3>1+</h3>
+              <p>Years Coding</p>
+            </div>
           </div>
         </div>
 
@@ -94,100 +113,292 @@
     <!-- PROJECTS SECTION -->
     <section id="projects" class="projects">
       <div class="container">
-        <h2 class="section__title">My Projects</h2>
-        <p class="section__subtitle">Showcasing my best work in Full Stack Development</p>
+        <h2 class="section__title">Featured Projects</h2>
+        <p class="section__subtitle">Showcasing my best work in Full Stack Development & System Architecture</p>
 
-        <!-- Featured Project -->
-        <div class="project__featured">
-          <div class="project__image">
-            <div class="project__badge">Featured</div>
-            <div class="project__tech-stack">
-              <span>MongoDB</span>
-              <span>Express.js</span>
-              <span>React.js</span>
-              <span>Node.js</span>
+        <div class="projects__detailed">
+          <!-- Project 1: Flash Chat -->
+          <div class="project__detailed-item">
+            <div class="project__detailed-visual">
+              <div class="project__icon">💬</div>
+              <div class="project__detailed-tech">
+                <span>Socket.io</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>React</span>
+                <span>Node.js</span>
+              </div>
+            </div>
+            <div class="project__detailed-info">
+              <h3>
+                Flash Chat
+                <span class="project__detailed-badge">Real-Time</span>
+                <span class="project__detailed-badge">Secure</span>
+              </h3>
+              <p class="project__detailed-desc">
+                A full-featured, low-latency real-time chat platform built on the MERN stack. Designed with performance and security in mind, it provides seamless instant communication with sub-second latency.
+              </p>
+              <ul class="project__detailed-features">
+                <li>
+                  <ion-icon name="flash"></ion-icon>
+                  <span>Bi-directional Socket.io communication channels</span>
+                </li>
+                <li>
+                  <ion-icon name="keypad"></ion-icon>
+                  <span>JWT-based authentication with secure token rotations</span>
+                </li>
+                <li>
+                  <ion-icon name="pulse"></ion-icon>
+                  <span>Dynamic user presence status & online indicators</span>
+                </li>
+                <li>
+                  <ion-icon name="git-network"></ion-icon>
+                  <span>Optimized backend architecture for minimal latency</span>
+                </li>
+              </ul>
+              <div class="project__links">
+                <a href="https://github.com/Gulshankartikk" target="_blank" class="btn btn--primary">
+                  <ion-icon name="logo-github"></ion-icon> View Code
+                </a>
+                <a href="#contact" class="btn btn--secondary">
+                  <ion-icon name="mail"></ion-icon> Collaborate
+                </a>
+              </div>
             </div>
           </div>
-          <div class="project__content">
-            <h3>🎓 DR AITD Management System</h3>
-            <p class="project__description">
-              A comprehensive College ERP system with role-based access control, built with modern web technologies.
-              Features include student/teacher/admin modules, attendance tracking, fee management, and resource sharing.
-            </p>
 
-            <ul class="project__features">
-              <li>
-                <ion-icon name="shield-checkmark"></ion-icon>
-                <span>JWT Authentication with token expiry</span>
-              </li>
-              <li>
-                <ion-icon name="people"></ion-icon>
-                <span>Complete Admin, Teacher & Student Modules</span>
-              </li>
-              <li>
-                <ion-icon name="desktop"></ion-icon>
-                <span>Professional responsive UI with custom components</span>
-              </li>
-              <li>
-                <ion-icon name="server"></ion-icon>
-                <span>RESTful API with secure backend architecture</span>
-              </li>
-            </ul>
+          <!-- Project 2: DR AITD College System -->
+          <div class="project__detailed-item reverse">
+            <div class="project__detailed-info">
+              <h3>
+                DR AITD College ERP
+                <span class="project__detailed-badge">REST API</span>
+                <span class="project__detailed-badge">Role-Based</span>
+              </h3>
+              <p class="project__detailed-desc">
+                An advanced academic management ERP platform designed specifically for college systems. It structures core administrative, faculty, and student workflows into a single cohesive, secure architecture.
+              </p>
+              <ul class="project__detailed-features">
+                <li>
+                  <ion-icon name="lock"></ion-icon>
+                  <span>Secure role-based dashboard access controls (Admin, Faculty, Student)</span>
+                </li>
+                <li>
+                  <ion-icon name="filing"></ion-icon>
+                  <span>Efficient relational-modeled database schemas in MongoDB</span>
+                </li>
+                <li>
+                  <ion-icon name="analytics"></ion-icon>
+                  <span>Built-in analytics metrics tracking for grades & student reports</span>
+                </li>
+                <li>
+                  <ion-icon name="infinite"></ion-icon>
+                  <span>Robust RESTful endpoints with unified error handling middlewares</span>
+                </li>
+              </ul>
+              <div class="project__links">
+                <a href="https://github.com/Gulshankartikk" target="_blank" class="btn btn--primary">
+                  <ion-icon name="logo-github"></ion-icon> View Code
+                </a>
+                <a href="#contact" class="btn btn--secondary">
+                  <ion-icon name="mail"></ion-icon> Collaborate
+                </a>
+              </div>
+            </div>
+            <div class="project__detailed-visual">
+              <div class="project__icon">🏫</div>
+              <div class="project__detailed-tech">
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+                <span>REST API</span>
+                <span>Role-Auth</span>
+              </div>
+            </div>
+          </div>
 
-            <div class="project__links">
-              <a href="https://github.com/Gulshankartikk" target="_blank" class="btn btn--primary">
-                <ion-icon name="logo-github"></ion-icon> View Code
-              </a>
-              <a href="#contact" class="btn btn--secondary">
-                <ion-icon name="mail"></ion-icon> Get in Touch
-              </a>
+          <!-- Project 3: Personal Portfolio -->
+          <div class="project__detailed-item">
+            <div class="project__detailed-visual">
+              <div class="project__icon">🌐</div>
+              <div class="project__detailed-tech">
+                <span>React</span>
+                <span>CSS3</span>
+                <span>GSAP</span>
+                <span>Responsive</span>
+                <span>Vercel</span>
+              </div>
+            </div>
+            <div class="project__detailed-info">
+              <h3>
+                Personal Portfolio
+                <span class="project__detailed-badge">Modern UI</span>
+                <span class="project__detailed-badge">Optimized</span>
+              </h3>
+              <p class="project__detailed-desc">
+                My personal digital footprint showcasing all key projects, metrics, and technical expertise. Engineered under rigid performance optimization rules targeting flawless UX.
+              </p>
+              <ul class="project__detailed-features">
+                <li>
+                  <ion-icon name="desktop"></ion-icon>
+                  <span>Responsive CSS Grid layouts designed with vanilla CSS excellence</span>
+                </li>
+                <li>
+                  <ion-icon name="speedometer"></ion-icon>
+                  <span>High Lighthouse metrics with structured semantic metadata tags</span>
+                </li>
+                <li>
+                  <ion-icon name="color-palette"></ion-icon>
+                  <span>Custom theme transitions with interactive GSAP loaders</span>
+                </li>
+                <li>
+                  <ion-icon name="code-working"></ion-icon>
+                  <span>Highly optimized code delivery for fast client load times</span>
+                </li>
+              </ul>
+              <div class="project__links">
+                <a href="https://github.com/Gulshankartikk" target="_blank" class="btn btn--primary">
+                  <ion-icon name="logo-github"></ion-icon> View Code
+                </a>
+                <a href="#contact" class="btn btn--secondary">
+                  <ion-icon name="mail"></ion-icon> Collaborate
+                </a>
+              </div>
             </div>
           </div>
         </div>
+      </div>
+    </section>
 
-        <!-- Other Projects Grid -->
-        <div class="projects__grid">
-          <div class="project__card">
-            <div class="project__card-icon">💼</div>
-            <h4>Portfolio Website</h4>
-            <p>Responsive personal portfolio with dark/light theme toggle and smooth animations</p>
-            <div class="project__card-tech">
-              <span>HTML</span>
-              <span>CSS</span>
-              <span>JavaScript</span>
+    <!-- DSA SECTION -->
+    <section id="dsa" class="dsa-section">
+      <div class="container">
+        <h2 class="section__title">DSA & Problem Solving</h2>
+        <p class="section__subtitle">My algorithmic journey and practice metrics across platforms</p>
+
+        <div class="dsa__grid">
+          <!-- Metrics Card -->
+          <div class="dsa__metrics-card">
+            <div class="dsa__solved-title">
+              <h3>200+</h3>
+              <p>Problems Solved</p>
+            </div>
+            
+            <div class="dsa__difficulty-breakdown">
+              <!-- Easy -->
+              <div class="dsa__diff-bar-container">
+                <div class="dsa__diff-info">
+                  <span class="dsa__diff-name">
+                    <span class="dsa__diff-dot easy"></span> Easy
+                  </span>
+                  <span>80+ Solved</span>
+                </div>
+                <div class="dsa__diff-progress-bg">
+                  <div class="dsa__diff-progress-fill easy" style="width: 40%;"></div>
+                </div>
+              </div>
+
+              <!-- Medium -->
+              <div class="dsa__diff-bar-container">
+                <div class="dsa__diff-info">
+                  <span class="dsa__diff-name">
+                    <span class="dsa__diff-dot medium"></span> Medium
+                  </span>
+                  <span>90+ Solved</span>
+                </div>
+                <div class="dsa__diff-progress-bg">
+                  <div class="dsa__diff-progress-fill medium" style="width: 45%;"></div>
+                </div>
+              </div>
+
+              <!-- Hard -->
+              <div class="dsa__diff-bar-container">
+                <div class="dsa__diff-info">
+                  <span class="dsa__diff-name">
+                    <span class="dsa__diff-dot hard"></span> Hard
+                  </span>
+                  <span>30+ Solved</span>
+                </div>
+                <div class="dsa__diff-progress-bg">
+                  <div class="dsa__diff-progress-fill hard" style="width: 15%;"></div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="project__card">
-            <div class="project__card-icon">🌐</div>
-            <h4>Web Applications</h4>
-            <p>Full-stack projects using modern frameworks and best practices</p>
-            <div class="project__card-tech">
-              <span>React</span>
-              <span>Node.js</span>
-              <span>MongoDB</span>
+          <!-- Topic Grid -->
+          <div class="dsa__topics">
+            <!-- Card 1 -->
+            <div class="dsa__topic-card">
+              <div class="dsa__topic-card-header">
+                <h4>Arrays & Strings</h4>
+                <span>75+ Solved</span>
+              </div>
+              <p class="dsa__topic-techniques">Sliding window, two pointers, prefix sum, frequency mapping</p>
             </div>
-          </div>
-
-          <div class="project__card">
-            <div class="project__card-icon">🧮</div>
-            <h4>DSA Solutions</h4>
-            <p>Optimized algorithms and data structure implementations in C++, Java & Python</p>
-            <div class="project__card-tech">
-              <span>C++</span>
-              <span>Java</span>
-              <span>Python</span>
+            <!-- Card 2 -->
+            <div class="dsa__topic-card">
+              <div class="dsa__topic-card-header">
+                <h4>Linked Lists</h4>
+                <span>25+ Solved</span>
+              </div>
+              <p class="dsa__topic-techniques">Reversal, merge sort, cycle detection, fast & slow pointers</p>
             </div>
-          </div>
-
-          <div class="project__card">
-            <div class="project__card-icon">🤝</div>
-            <h4>Open Source</h4>
-            <p>Contributing to community projects and sharing knowledge on GitHub</p>
-            <div class="project__card-tech">
-              <span>Git</span>
-              <span>GitHub</span>
-              <span>Collaboration</span>
+            <!-- Card 3 -->
+            <div class="dsa__topic-card">
+              <div class="dsa__topic-card-header">
+                <h4>Stack & Queue</h4>
+                <span>20+ Solved</span>
+              </div>
+              <p class="dsa__topic-techniques">Monotonic stack, sliding window max, queue utilizing stacks</p>
+            </div>
+            <!-- Card 4 -->
+            <div class="dsa__topic-card">
+              <div class="dsa__topic-card-header">
+                <h4>Trees & BST</h4>
+                <span>20+ Solved</span>
+              </div>
+              <p class="dsa__topic-techniques">Traversals (In/Pre/Post/Level), LCA, diameter, views, BST operations</p>
+            </div>
+            <!-- Card 5 -->
+            <div class="dsa__topic-card">
+              <div class="dsa__topic-card-header">
+                <h4>Graphs</h4>
+                <span>15+ Solved</span>
+              </div>
+              <p class="dsa__topic-techniques">BFS, DFS, topological sorting, cycle detection, Dijkstra</p>
+            </div>
+            <!-- Card 6 -->
+            <div class="dsa__topic-card">
+              <div class="dsa__topic-card-header">
+                <h4>Recursion</h4>
+                <span>18+ Solved</span>
+              </div>
+              <p class="dsa__topic-techniques">N-Queens, backtracking subsets, permutations, tree recursions</p>
+            </div>
+            <!-- Card 7 -->
+            <div class="dsa__topic-card">
+              <div class="dsa__topic-card-header">
+                <h4>Dynamic Prog.</h4>
+                <span>12+ Solved</span>
+              </div>
+              <p class="dsa__topic-techniques">Knapsack, LCS, coin change, grid path, memoization & tabulation</p>
+            </div>
+            <!-- Card 8 -->
+            <div class="dsa__topic-card">
+              <div class="dsa__topic-card-header">
+                <h4>Hashing</h4>
+                <span>15+ Solved</span>
+              </div>
+              <p class="dsa__topic-techniques">Maps, sets, frequency count, anagram detection, custom hashers</p>
+            </div>
+            <!-- Card 9 -->
+            <div class="dsa__topic-card">
+              <div class="dsa__topic-card-header">
+                <h4>Binary Search</h4>
+                <span>10+ Solved</span>
+              </div>
+              <p class="dsa__topic-techniques">Search in rotated, boundary finders, search space optimization</p>
             </div>
           </div>
         </div>
@@ -225,6 +436,45 @@
             </p>
           </div>
 
+          <div class="about__card">
+            <h3>⚡ Fun Fact</h3>
+            <p>
+              I enjoy debugging more than writing new features 😄 There's a special satisfaction in tracing a bug through 5 layers of abstraction and finding the one missing semicolon that broke everything. That's the real game. Also, I believe consistency beats talent — showing up every day to solve one problem compounds faster than people think.
+            </p>
+            
+            <!-- DEBUGGING TERMINAL SIMULATOR -->
+            <div class="terminal-card">
+              <div class="terminal__header">
+                <div class="terminal__buttons">
+                  <span class="terminal__dot red"></span>
+                  <span class="terminal__dot yellow"></span>
+                  <span class="terminal__dot green"></span>
+                </div>
+                <span class="terminal__title">gulshan@debugger:~/mern-app</span>
+              </div>
+              <div class="terminal__content">
+                <div class="terminal__code" id="terminal-code-area"><span class="keyword">const</span> <span class="function">initServer</span> = () => {
+  <span class="keyword">const</span> app = <span class="function">express</span>()
+  app.<span class="function">use</span>(cors())<span class="comment"> // CORS support</span>
+  app.<span class="function">listen</span>(<span class="number">5000</span>, () => {
+    console.<span class="function">log</span>(<span class="string">"Server running..."</span>)
+  })<span class="error-highlight" id="bug-semicolon" style="background: rgba(255, 95, 86, 0.25); border-bottom: 2px dashed #ff5f56;"></span>
+}</div>
+                <div class="terminal__console" id="terminal-console-log">
+                  <div class="terminal__console-line error">
+                    <span class="keyword">[ERROR]</span> Compilation failed: Semicolon expected.
+                  </div>
+                  <div class="terminal__console-line info">
+                    <span class="function">[DEBUGGER]</span> Ready. Click "Run Debugger" to execute automated correction scans.
+                  </div>
+                </div>
+              </div>
+              <div class="terminal__actions">
+                <button class="btn btn--primary" id="btn-run-debugger">🔧 Run Debugger</button>
+              </div>
+            </div>
+          </div>
+
           <!-- Skills Section -->
           <div class="skills">
             <h3>💡 Technical Skills</h3>
@@ -232,8 +482,8 @@
               <div class="skill__category">
                 <h4>Frontend</h4>
                 <div class="skill__tags">
-                  <span>HTML</span>
-                  <span>CSS</span>
+                  <span>HTML5</span>
+                  <span>CSS3</span>
                   <span>JavaScript</span>
                   <span>React.js</span>
                 </div>
@@ -246,13 +496,15 @@
                   <span>Express.js</span>
                   <span>RESTful APIs</span>
                   <span>JWT Auth</span>
+                  <span>Socket.io</span>
                 </div>
               </div>
 
               <div class="skill__category">
-                <h4>Database</h4>
+                <h4>Database & Caching</h4>
                 <div class="skill__tags">
                   <span>MongoDB</span>
+                  <span>Redis</span>
                   <span>MySQL</span>
                 </div>
               </div>
@@ -261,19 +513,19 @@
                 <h4>Programming</h4>
                 <div class="skill__tags">
                   <span>C++</span>
-                  <span>Java</span>
                   <span>Python</span>
-                  <span>DSA</span>
+                  <span>DSA (C++)</span>
                 </div>
               </div>
 
               <div class="skill__category">
-                <h4>Tools & Others</h4>
+                <h4>Tools & DevOps</h4>
                 <div class="skill__tags">
+                  <span>Docker</span>
+                  <span>AWS</span>
                   <span>Git</span>
                   <span>GitHub</span>
                   <span>Postman</span>
-                  <span>VS Code</span>
                 </div>
               </div>
             </div>
@@ -282,6 +534,137 @@
 
         <div class="about__image">
           <img src="./assets/img/third image.jpg" alt="About Gulshan Kumar" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ACTIVE PIPELINE & OPPORTUNITIES -->
+    <section id="pipeline" class="pipeline-section">
+      <div class="container">
+        <h2 class="section__title">Active Development & Careers</h2>
+        <p class="section__subtitle">My live construction timeline and role matching</p>
+
+        <div class="pipeline__grid">
+          <!-- Active Pipelines -->
+          <div class="pipeline__dashboard">
+            <h3 style="margin-bottom: 2rem; color: var(--primary-light); font-size: 1.4rem;">🚀 Currently Building (Live Pipeline)</h3>
+            <div class="pipeline__list">
+              <!-- Item 1 -->
+              <div class="pipeline__item active">
+                <div class="pipeline__status">
+                  <ion-icon name="logo-docker"></ion-icon>
+                </div>
+                <div class="pipeline__info">
+                  <h4>Dockerized MERN Apps</h4>
+                  <p>Containerizing full-stack environments utilizing multi-stage builds and Docker Compose pipelines.</p>
+                </div>
+              </div>
+              <!-- Item 2 -->
+              <div class="pipeline__item active">
+                <div class="pipeline__status">
+                  <ion-icon name="cloud-upload"></ion-icon>
+                </div>
+                <div class="pipeline__info">
+                  <h4>AWS Deployment Pipelines</h4>
+                  <p>Configuring secure EC2 instances, S3 asset buckets, and automated Github Actions CI/CD pipelines.</p>
+                </div>
+              </div>
+              <!-- Item 3 -->
+              <div class="pipeline__item active">
+                <div class="pipeline__status">
+                  <ion-icon name="git-network"></ion-icon>
+                </div>
+                <div class="pipeline__info">
+                  <h4>Scalable Backend Systems</h4>
+                  <p>Integrating Express routing architectures with client rate limiting and memory caching layers.</p>
+                </div>
+              </div>
+              <!-- Item 4 -->
+              <div class="pipeline__item">
+                <div class="pipeline__status">
+                  <ion-icon name="trophy"></ion-icon>
+                </div>
+                <div class="pipeline__info">
+                  <h4>DSA Speed Training</h4>
+                  <p>Targeting the next major milestone of 300+ problems on Leetcode and GeeksforGeeks.</p>
+                </div>
+              </div>
+              <!-- Item 5 -->
+              <div class="pipeline__item">
+                <div class="pipeline__status">
+                  <ion-icon name="cube"></ion-icon>
+                </div>
+                <div class="pipeline__info">
+                  <h4>System Design Studies</h4>
+                  <p>Analyzing High-Level Design (HLD) and Low-Level Design (LLD) architectural patterns.</p>
+                </div>
+              </div>
+              <!-- Item 6 -->
+              <div class="pipeline__item">
+                <div class="pipeline__status">
+                  <ion-icon name="flash"></ion-icon>
+                </div>
+                <div class="pipeline__info">
+                  <h4>Redis Integration</h4>
+                  <p>Configuring highly available Redis cache stores for user sessions and frequent query storage.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Opportunities matrix -->
+          <div class="opp-card">
+            <h3>💼 Open to Opportunities</h3>
+            <p style="color: var(--text-gray); font-size: 0.9rem; line-height: 1.6; margin-bottom: 0.5rem;">
+              Actively matching roles in scaling startups, product environments, or core technical teams.
+            </p>
+            <div class="opp__list">
+              <!-- Intern -->
+              <div class="opp__item">
+                <div class="opp__title">
+                  <strong>Full Stack Intern</strong>
+                  <span>MERN · React · Node · MongoDB</span>
+                </div>
+                <div class="opp__badge open">
+                  <span class="opp__pulse"></span>
+                  Active
+                </div>
+              </div>
+              <!-- Backend -->
+              <div class="opp__item">
+                <div class="opp__title">
+                  <strong>Backend Developer</strong>
+                  <span>Node · Express · MongoDB · Caching</span>
+                </div>
+                <div class="opp__badge open">
+                  <span class="opp__pulse"></span>
+                  Active
+                </div>
+              </div>
+              <!-- SDE -->
+              <div class="opp__item">
+                <div class="opp__title">
+                  <strong>Software Engineer</strong>
+                  <span>Product Dev · API Systems · Scaling</span>
+                </div>
+                <div class="opp__badge open">
+                  <span class="opp__pulse"></span>
+                  Active
+                </div>
+              </div>
+              <!-- DSA -->
+              <div class="opp__item">
+                <div class="opp__title">
+                  <strong>DSA / CP Roles</strong>
+                  <span>Algorithm Architectures · C++</span>
+                </div>
+                <div class="opp__badge open">
+                  <span class="opp__pulse"></span>
+                  Active
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -330,6 +713,22 @@
               <div>
                 <strong>GitHub</strong>
                 <a href="https://github.com/Gulshankartikk" target="_blank">@Gulshankartikk</a>
+              </div>
+            </div>
+
+            <div class="contact__card">
+              <ion-icon name="code"></ion-icon>
+              <div>
+                <strong>LeetCode</strong>
+                <a href="https://leetcode.com/gulshankartikk" target="_blank">gulshankartikk</a>
+              </div>
+            </div>
+
+            <div class="contact__card">
+              <ion-icon name="git-branch"></ion-icon>
+              <div>
+                <strong>GeeksforGeeks</strong>
+                <a href="https://www.geeksforgeeks.org/user/kg87263w1xq/" target="_blank">kg87263w1xq</a>
               </div>
             </div>
           </div>
@@ -385,6 +784,12 @@
             </a>
             <a href="https://www.linkedin.com/in/gulshan-kumar-192852378/" target="_blank" aria-label="LinkedIn">
               <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+            <a href="https://leetcode.com/gulshankartikk" target="_blank" aria-label="LeetCode">
+              <ion-icon name="code"></ion-icon>
+            </a>
+            <a href="https://www.geeksforgeeks.org/user/kg87263w1xq/" target="_blank" aria-label="GeeksforGeeks">
+              <ion-icon name="git-branch"></ion-icon>
             </a>
             <a href="https://twitter.com/Gulshankartikk" target="_blank" aria-label="Twitter">
               <ion-icon name="logo-twitter"></ion-icon>
