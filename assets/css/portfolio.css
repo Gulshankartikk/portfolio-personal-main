@@ -158,10 +158,11 @@ button {
     content: '';
     position: absolute;
     bottom: -10px;
-    left: 0;
+    left: 50%;
+    transform: translateX(-50%);
     width: 60%;
     height: 4px;
-    background: linear-gradient(90deg, var(--primary-color), transparent);
+    background: linear-gradient(90deg, var(--primary-color), var(--primary-light));
     border-radius: 2px;
 }
 
@@ -472,10 +473,13 @@ button {
     scroll-margin-top: 5rem;
 }
 
-.projects .section__title,
+.projects .section__title {
+    display: inline-block;
+}
+
 .projects .section__subtitle {
-    text-align: center;
     display: block;
+    text-align: center;
 }
 
 .project__featured {
@@ -640,16 +644,21 @@ button {
 }
 
 .about__container {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 4rem;
-    align-items: start;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 .about__content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+.about__cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .about__card {
@@ -770,40 +779,58 @@ button {
 
 .contact__container {
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1.2fr 1fr;
     gap: 4rem;
     align-items: start;
+    max-width: var(--container-max-width);
+    margin: 0 auto;
 }
 
-.contact__image {
-    position: sticky;
-    top: 6rem;
+.contact__form-container {
+    background: var(--glass-bg);
+    border: 1px solid var(--glass-border);
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: var(--card-glow);
+    backdrop-filter: blur(12px);
 }
 
-.contact__image img {
+.form__group {
+    margin-bottom: 1.5rem;
+}
+
+.form__input {
     width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-    border: 3px solid transparent;
-    transition: all 0.4s ease;
+    padding: 1rem 1.2rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 12px;
+    color: var(--text-white);
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s var(--transition-smooth);
 }
 
-.contact__image img:hover {
-    transform: scale(1.05) translateY(-5px);
-    box-shadow: 0 15px 40px rgba(78, 17, 22, 0.4);
-    border-color: var(--primary-color);
-}
-
-.contact__intro {
-    font-size: 1.1rem;
+.form__input::placeholder {
     color: var(--text-light);
-    margin-bottom: 2rem;
-    line-height: 1.8;
+}
+
+.form__input:focus {
+    border-color: var(--primary-light);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(255, 107, 107, 0.1);
+}
+
+.form__textarea {
+    resize: none;
 }
 
 .contact__cards {
     display: grid;
-    gap: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(285px, 1fr));
+    gap: 1.5rem;
+    text-align: left;
 }
 
 .contact__card {
@@ -1309,10 +1336,13 @@ button:focus-visible {
     background: linear-gradient(180deg, var(--bg-darker) 0%, var(--bg-dark) 100%);
 }
 
-.dsa-section .section__title,
+.dsa-section .section__title {
+    display: inline-block;
+}
+
 .dsa-section .section__subtitle {
-    text-align: center;
     display: block;
+    text-align: center;
 }
 
 .dsa__grid {
@@ -1479,10 +1509,13 @@ button:focus-visible {
     scroll-margin-top: 5rem;
 }
 
-.pipeline-section .section__title,
+.pipeline-section .section__title {
+    display: inline-block;
+}
+
 .pipeline-section .section__subtitle {
-    text-align: center;
     display: block;
+    text-align: center;
 }
 
 .pipeline__grid {
@@ -1786,6 +1819,7 @@ button:focus-visible {
 @media screen and (max-width: 1024px) {
     .dsa__grid,
     .pipeline__grid,
+    .contact__container,
     .project__detailed-item,
     .project__detailed-item.reverse {
         grid-template-columns: 1fr;
