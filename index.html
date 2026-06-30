@@ -148,45 +148,6 @@
               </p>
             </div>
           </div>
-
-          <div class="about__card">
-            <h3>⚡ Fun Fact</h3>
-            <p>
-              I enjoy debugging more than writing new features 😄 There's a special satisfaction in tracing a bug through 5 layers of abstraction and finding the one missing semicolon that broke everything. That's the real game. Also, I believe consistency beats talent — showing up every day to solve one problem compounds faster than people think.
-            </p>
-            
-            <!-- DEBUGGING TERMINAL SIMULATOR -->
-            <div class="terminal-card">
-              <div class="terminal__header">
-                <div class="terminal__buttons">
-                  <span class="terminal__dot red"></span>
-                  <span class="terminal__dot yellow"></span>
-                  <span class="terminal__dot green"></span>
-                </div>
-                <span class="terminal__title">gulshan@debugger:~/mern-app</span>
-              </div>
-              <div class="terminal__content">
-                <div class="terminal__code" id="terminal-code-area"><span class="keyword">const</span> <span class="function">initServer</span> = () => {
-  <span class="keyword">const</span> app = <span class="function">express</span>()
-  app.<span class="function">use</span>(cors())<span class="comment"> // CORS support</span>
-  app.<span class="function">listen</span>(<span class="number">5000</span>, () => {
-    console.<span class="function">log</span>(<span class="string">"Server running..."</span>)
-  })<span class="error-highlight" id="bug-semicolon" style="background: rgba(255, 95, 86, 0.25); border-bottom: 2px dashed #ff5f56;"></span>
-}</div>
-                <div class="terminal__console" id="terminal-console-log">
-                  <div class="terminal__console-line error">
-                    <span class="keyword">[ERROR]</span> Compilation failed: Semicolon expected.
-                  </div>
-                  <div class="terminal__console-line info">
-                    <span class="function">[DEBUGGER]</span> Ready. Click "Run Debugger" to execute automated correction scans.
-                  </div>
-                </div>
-              </div>
-              <div class="terminal__actions">
-                <button class="btn btn--primary" id="btn-run-debugger">🔧 Run Debugger</button>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
