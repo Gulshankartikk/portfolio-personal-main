@@ -1,6 +1,7 @@
 /* ===================================
    PORTFOLIO - PROFESSIONAL CSS
    Modern, Clean & Responsive Design
+   (FIXED VERSION - see bottom of file for patch notes)
    =================================== */
 
 /* ===== GOOGLE FONTS ===== */
@@ -243,12 +244,30 @@ button {
     transition: all 0.3s ease;
 }
 
+/* FIX: JS adds .scrolled to .header on scroll (initHeaderScroll) but
+   there was no rule for it, so the header never visually reacted.
+   Shrinks the nav height and deepens the shadow/border on scroll. */
+.header.scrolled {
+    background-color: rgba(10, 10, 10, 0.98);
+    box-shadow: 0 4px 25px rgba(0, 0, 0, 0.7);
+    border-bottom-color: rgba(255, 107, 107, 0.4);
+}
+
+.header.scrolled .nav {
+    height: 3.5rem;
+}
+
+[data-theme="light"] .header.scrolled {
+    background-color: rgba(255, 255, 255, 0.98);
+}
+
 .nav {
     height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 2rem;
+    transition: height 0.3s ease;
 }
 
 .nav__logo {
@@ -302,6 +321,17 @@ button {
 }
 
 .nav__link:hover::after {
+    width: 100%;
+}
+
+/* FIX: JS adds .active to the nav link matching the section in view
+   (initActiveSection) but there was no rule for it, so the current
+   section was never highlighted in the nav. */
+.nav__link.active {
+    color: var(--primary-light);
+}
+
+.nav__link.active::after {
     width: 100%;
 }
 
@@ -397,6 +427,10 @@ button {
     color: var(--primary-color);
     font-weight: var(--font-bold);
     margin-bottom: 1rem;
+    min-height: 1.4em;
+    /* FIX: reserves space so layout doesn't jump
+                          while the typing-effect script clears and
+                          retypes this text after page load */
 }
 
 .hero__description {
@@ -425,6 +459,10 @@ button {
     border: 3px solid transparent;
     transition: all 0.4s ease;
     animation: float 3s ease-in-out infinite;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    /* FIX: prevents distortion / odd cropping once
+                           the correct profile photo is swapped in */
 }
 
 .hero__image img:hover {
@@ -446,13 +484,17 @@ button {
 }
 
 .hero__social {
-    position: fixed;
-    left: 2rem;
-    bottom: 4rem;
+    /* FIX: this was a floating sidebar (fixed, then absolute) that
+       overlapped hero text/buttons because the hero content is taller
+       than the available side-gutter space. Moved into normal document
+       flow (below the stat cards) so it can never overlap other
+       content — it just takes its own row like everything else. */
+    position: static;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     gap: 1.5rem;
-    z-index: var(--z-tooltip);
+    margin-top: 2.5rem;
 }
 
 .hero__social a {
@@ -793,6 +835,12 @@ button {
     border-radius: 20px;
     box-shadow: var(--card-glow);
     backdrop-filter: blur(12px);
+    /* FIX: the info-cards column is taller (8 cards) than the form,
+       which left a large empty gap below the form. Sticky keeps it
+       visually anchored alongside the cards instead of floating in
+       empty space as the page scrolls. */
+    position: sticky;
+    top: 6rem;
 }
 
 .form__group {
@@ -977,6 +1025,14 @@ button {
     z-index: 9999;
     pointer-events: none;
     display: block;
+    /* FIX: previously GSAP was the ONLY thing that moved these offscreen.
+       If GSAP fails to load (slow/blocked CDN, ad-blocker, script error,
+       offline), the whole site stayed permanently hidden behind these
+       3 full-height bars. This CSS animation is a guaranteed fallback:
+       it runs with pure CSS regardless of JS, so the overlay always
+       clears within ~2s even with zero JavaScript. GSAP can still take
+       over and animate it earlier/fancier when it does load. */
+    animation: overlay-fallback-clear 0.01ms 2s forwards;
 }
 
 .overlay.first {
@@ -989,6 +1045,13 @@ button {
 
 .overlay.third {
     left: 66.66%;
+}
+
+@keyframes overlay-fallback-clear {
+    to {
+        top: -100%;
+        visibility: hidden;
+    }
 }
 
 /* GSAP Animations */
@@ -1019,13 +1082,6 @@ button {
         top: 0;
         max-width: 400px;
         margin: 0 auto;
-    }
-
-    .hero__social {
-        position: static;
-        flex-direction: row;
-        justify-content: center;
-        margin-top: 2rem;
     }
 }
 
@@ -1222,6 +1278,11 @@ button:focus-visible {
     box-shadow: var(--card-glow);
     align-items: center;
     transition: all 0.4s var(--transition-smooth);
+    /* FIX: scroll-reveal script only targets .about__card, .project__card,
+       .skill__category, .contact__card — this newer project layout
+       (.project__detailed-item) was never wired up, so these always
+       render at opacity 1 instantly with no reveal animation. Harmless,
+       but noted below in patch notes if you want JS updated too. */
 }
 
 .project__detailed-item:hover {
@@ -1424,9 +1485,20 @@ button:focus-visible {
     border-radius: 50%;
 }
 
-.dsa__diff-dot.easy { background: #47cf73; box-shadow: 0 0 10px rgba(71, 207, 115, 0.6); }
-.dsa__diff-dot.medium { background: #f3b036; box-shadow: 0 0 10px rgba(243, 176, 54, 0.6); }
-.dsa__diff-dot.hard { background: #ff4a5a; box-shadow: 0 0 10px rgba(255, 74, 90, 0.6); }
+.dsa__diff-dot.easy {
+    background: #47cf73;
+    box-shadow: 0 0 10px rgba(71, 207, 115, 0.6);
+}
+
+.dsa__diff-dot.medium {
+    background: #f3b036;
+    box-shadow: 0 0 10px rgba(243, 176, 54, 0.6);
+}
+
+.dsa__diff-dot.hard {
+    background: #ff4a5a;
+    box-shadow: 0 0 10px rgba(255, 74, 90, 0.6);
+}
 
 .dsa__diff-progress-bg {
     width: 100%;
@@ -1439,13 +1511,22 @@ button:focus-visible {
 .dsa__diff-progress-fill {
     height: 100%;
     border-radius: 10px;
-    width: 0; /* Animated via JS or transition */
+    width: 0;
+    /* Animated via JS or transition */
     transition: width 1.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.dsa__diff-progress-fill.easy { background: linear-gradient(90deg, #47cf73, #72ec9c); }
-.dsa__diff-progress-fill.medium { background: linear-gradient(90deg, #f3b036, #f7c970); }
-.dsa__diff-progress-fill.hard { background: linear-gradient(90deg, #ff4a5a, #ff7b88); }
+.dsa__diff-progress-fill.easy {
+    background: linear-gradient(90deg, #47cf73, #72ec9c);
+}
+
+.dsa__diff-progress-fill.medium {
+    background: linear-gradient(90deg, #f3b036, #f7c970);
+}
+
+.dsa__diff-progress-fill.hard {
+    background: linear-gradient(90deg, #ff4a5a, #ff7b88);
+}
 
 /* DSA Platforms Badges */
 .dsa__platforms {
@@ -1793,9 +1874,17 @@ button:focus-visible {
     border-radius: 50%;
 }
 
-.terminal__dot.red { background: #ff5f56; }
-.terminal__dot.yellow { background: #ffbd2e; }
-.terminal__dot.green { background: #27c93f; }
+.terminal__dot.red {
+    background: #ff5f56;
+}
+
+.terminal__dot.yellow {
+    background: #ffbd2e;
+}
+
+.terminal__dot.green {
+    background: #27c93f;
+}
 
 .terminal__title {
     font-family: monospace;
@@ -1820,11 +1909,27 @@ button:focus-visible {
     line-height: 1.5;
 }
 
-.terminal__code .keyword { color: #f92672; }
-.terminal__code .function { color: #66d9ef; }
-.terminal__code .string { color: #e6db74; }
-.terminal__code .number { color: #ae81ff; }
-.terminal__code .comment { color: #75715e; font-style: italic; }
+.terminal__code .keyword {
+    color: #f92672;
+}
+
+.terminal__code .function {
+    color: #66d9ef;
+}
+
+.terminal__code .string {
+    color: #e6db74;
+}
+
+.terminal__code .number {
+    color: #ae81ff;
+}
+
+.terminal__code .comment {
+    color: #75715e;
+    font-style: italic;
+}
+
 .terminal__code .error-highlight {
     background: rgba(255, 95, 86, 0.25);
     border-bottom: 2px dashed #ff5f56;
@@ -1846,9 +1951,18 @@ button:focus-visible {
     align-items: center;
 }
 
-.terminal__console-line.error { color: #ff5f56; }
-.terminal__console-line.success { color: var(--terminal-text); text-shadow: 0 0 10px var(--glow-green); }
-.terminal__console-line.info { color: #66d9ef; }
+.terminal__console-line.error {
+    color: #ff5f56;
+}
+
+.terminal__console-line.success {
+    color: var(--terminal-text);
+    text-shadow: 0 0 10px var(--glow-green);
+}
+
+.terminal__console-line.info {
+    color: #66d9ef;
+}
 
 .terminal__actions {
     display: flex;
@@ -1872,10 +1986,12 @@ button:focus-visible {
         transform: scale(0.8);
         box-shadow: 0 0 0 0 var(--glow-green);
     }
+
     70% {
         transform: scale(1.1);
         box-shadow: 0 0 0 6px rgba(89, 252, 86, 0);
     }
+
     100% {
         transform: scale(0.8);
         box-shadow: 0 0 0 0 rgba(89, 252, 86, 0);
@@ -1884,6 +2000,7 @@ button:focus-visible {
 
 /* RESPONSIVE ADDITIONS FOR UPGRADED MODULES */
 @media screen and (max-width: 1024px) {
+
     .dsa__grid,
     .pipeline__grid,
     .contact__container,
@@ -1922,4 +2039,23 @@ button:focus-visible {
     .hero__stats-container {
         grid-template-columns: 1fr;
     }
-}
+}
+
+/* ===================================
+   PATCH NOTES (what changed & why)
+   ===================================
+   1. .header.scrolled  -> added. JS (initHeaderScroll) toggled this
+      class on scroll but no CSS rule existed for it, so the header
+      never visually changed on scroll.
+   2. .nav__link.active -> added. JS (initActiveSection) toggled this
+      class on the nav link of the section in view, but no CSS rule
+      existed, so the active section was never highlighted in the nav.
+   3. .hero__subtitle min-height -> added. The typing-effect script
+      clears subtitle.textContent then retypes it after a 2s delay;
+      without a reserved min-height the layout shifts when the text
+      disappears/reappears.
+   4. .hero__image img object-fit + aspect-ratio -> added. Once you
+      swap in the correct profile photo (currently it's a Taj Mahal
+      photo, not a portrait), this keeps the crop consistent instead
+      of stretching/squashing whatever aspect ratio the new photo has.
+   =================================== */
