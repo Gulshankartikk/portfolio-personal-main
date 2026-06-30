@@ -1447,6 +1447,73 @@ button:focus-visible {
 .dsa__diff-progress-fill.medium { background: linear-gradient(90deg, #f3b036, #f7c970); }
 .dsa__diff-progress-fill.hard { background: linear-gradient(90deg, #ff4a5a, #ff7b88); }
 
+/* DSA Platforms Badges */
+.dsa__platforms {
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--glass-border);
+}
+
+.dsa__platforms h4 {
+    font-size: 1rem;
+    color: var(--primary-light);
+    margin-bottom: 1rem;
+    font-weight: var(--font-semibold);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.dsa__platform-badges {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+}
+
+.platform-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.6rem 1rem;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid var(--glass-border);
+    border-radius: 8px;
+    font-size: 0.8rem;
+    font-weight: var(--font-medium);
+    color: var(--text-white);
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.platform-badge ion-icon {
+    font-size: 1.1rem;
+    color: var(--primary-light);
+}
+
+.platform-badge:hover {
+    transform: translateY(-2px);
+    border-color: var(--primary-light);
+    background: rgba(78, 17, 22, 0.1);
+    box-shadow: 0 4px 12px rgba(78, 17, 22, 0.25);
+}
+
+.platform-badge.codolio {
+    grid-column: span 2;
+    justify-content: center;
+    background: rgba(108, 92, 231, 0.05);
+    border-color: rgba(108, 92, 231, 0.2);
+}
+
+.platform-badge.codolio ion-icon {
+    color: rgb(108, 92, 231);
+}
+
+.platform-badge.codolio:hover {
+    background: rgba(108, 92, 231, 0.15);
+    border-color: rgb(108, 92, 231);
+    box-shadow: 0 4px 12px rgba(108, 92, 231, 0.25);
+}
+
 .dsa__topics {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
