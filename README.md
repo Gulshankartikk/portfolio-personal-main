@@ -143,7 +143,7 @@ MIT License - see [docs/LICENSE](docs/LICENSE)
 
 - 🌐 GitHub: [@Gulshankartikk](https://github.com/Gulshankartikk)
 - 💼 LinkedIn: [Gulshan Kumar](https://www.linkedin.com/in/gulshan-kumar-192852378/)
-- 📧 Email: kg8726321083@gmail.com
+- 📧 Email: gulshankartik09@gmail.com
 - 🐦 Twitter: [@Gulshankartikk](https://twitter.com/Gulshankartikk)
 
 ## 🙏 Acknowledgments
